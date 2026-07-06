@@ -143,7 +143,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,0.96);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -183,6 +183,7 @@ a:focus-visible {
   font-size: 13px;
   line-height: 1.75;
   overflow-x: auto;
+  white-space: pre-wrap;
 }
 
 .registry-grid {
@@ -337,9 +338,10 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .registry-table td,
+  .registry-table,
+  .registry-table tbody,
   .registry-table tr,
-  .registry-table tbody {
+  .registry-table td {
     display: block;
     width: 100%;
   }
