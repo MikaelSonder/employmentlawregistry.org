@@ -1,402 +1,182 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{PRIMARY_SERVICE}} in {{JURISDICTION}} | Cross-Border {{PRIMARY_SERVICE}} Framework</title>
-  <meta name="description" content="{{META_DESCRIPTION}}" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)" />
-  <link rel="canonical" href="{{CANONICAL_URL}}" />
-  <link rel="alternate" hreflang="x-default" href="{{XDEFAULT_URL}}" />
-  <link rel="alternate" hreflang="{{HREFLANG_PRIMARY}}" href="{{CANONICAL_URL}}" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="{{SITE_NAME}}" />
-  <meta property="og:title" content="{{OG_TITLE}}" />
-  <meta property="og:description" content="{{OG_DESCRIPTION}}" />
-  <meta property="og:url" content="{{CANONICAL_URL}}" />
-  <meta property="og:image" content="{{OG_IMAGE_URL}}" />
-  <meta property="og:locale" content="{{OG_LOCALE}}" />
+<!-- ===========================
+POR REGISTRY MASTER TEMPLATE v1.0
+Universal Cross-Border Registry
+Replace all {{VARIABLES}}
+=========================== -->
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{TWITTER_TITLE}}" />
-  <meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}" />
-  <meta name="twitter:image" content="{{OG_IMAGE_URL}}" />
+<title>{{DOMAIN}} {{JURISDICTION}} | {{REGISTRY_NAME}}</title>
 
-  <link rel="preconnect" href="https://api.fontshare.com" />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet" />
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="robots" content="index,follow">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "{{SCHEMA_PAGE_NAME}}",
-    "url": "{{CANONICAL_URL}}",
-    "description": "{{META_DESCRIPTION}}",
-    "inLanguage": "{{PAGE_LANGUAGE}}",
-    "about": {
-      "@type": "DefinedTerm",
-      "name": "{{PRIMARY_SERVICE}}",
-      "description": "{{SERVICE_DEFINITION}}",
-      "inDefinedTermSet": "{{DEFINED_TERM_SET_URL}}"
-    },
-    "mentions": [
-      {"@type": "Place", "name": "{{JURISDICTION}}"},
-      {"@type": "Thing", "name": "Cross-Border {{PRIMARY_SERVICE}}"}
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "{{PUBLISHER_NAME}}",
-      "url": "{{PUBLISHER_URL}}",
-      "logo": {"@type": "ImageObject", "url": "{{PUBLISHER_LOGO_URL}}"}
-    },
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can foreign companies obtain {{PRIMARY_SERVICE_LOWER}} support in {{JURISDICTION}}?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{FAQ_1_ANSWER}}"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the typical process for {{PRIMARY_SERVICE_LOWER}} in {{JURISDICTION}}?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{FAQ_2_ANSWER}}"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which rules and authorities matter for cross-border {{PRIMARY_SERVICE_LOWER}}?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{FAQ_3_ANSWER}}"
-          }
-        }
-      ]
-    }
-  }
-  </script>
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<link rel="alternate" hreflang="en" href="{{CANONICAL_URL}}">
 
-  <style>
-    :root, [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
-      --color-bg:#f7f6f2; --color-surface:#f9f8f5; --color-surface-2:#fbfbf9; --color-surface-offset:#f3f0ec; --color-border:#d4d1ca; --color-divider:#dcd9d5; --color-text:#28251d; --color-text-muted:#7a7974; --color-primary:#01696f; --color-primary-hover:#0c4e54; --color-text-inverse:#f9f8f4;
-      --radius-sm:0.375rem; --radius-md:0.5rem; --radius-lg:0.75rem; --radius-xl:1rem; --shadow-sm:0 1px 2px oklch(0.2 0.01 80 / 0.06); --shadow-md:0 4px 12px oklch(0.2 0.01 80 / 0.08);
-      --content-narrow: 720px; --content-default: 1040px; --content-wide: 1240px;
-      --font-display:'Boska','Georgia',serif; --font-body:'Satoshi','Inter',sans-serif;
-    }
-    [data-theme="dark"] { --color-bg:#171614; --color-surface:#1c1b19; --color-surface-2:#201f1d; --color-surface-offset:#1d1c1a; --color-border:#393836; --color-divider:#262523; --color-text:#cdccca; --color-text-muted:#797876; --color-primary:#4f98a3; --color-primary-hover:#227f8b; --color-text-inverse:#2b2a28; --shadow-sm:0 1px 2px oklch(0 0 0 / 0.2); --shadow-md:0 4px 12px oklch(0 0 0 / 0.3); }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:5rem}
-    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--color-text);background:var(--color-bg)}
-    img,svg{display:block;max-width:100%;height:auto}
-    a,button,input,textarea,select{transition:all 180ms cubic-bezier(.16,1,.3,1)}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit;border:0;background:none;cursor:pointer}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .container{width:min(calc(100% - 2rem),var(--content-default));margin-inline:auto}
-    .container-wide{width:min(calc(100% - 2rem),var(--content-wide));margin-inline:auto}
-    .section{padding-block:clamp(var(--space-12),8vw,var(--space-20))}
-    .eyebrow{font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted)}
-    .display{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1.02;max-width:14ch}
-    .lead{font-size:var(--text-lg);color:var(--color-text-muted);max-width:64ch}
-    .grid{display:grid;gap:var(--space-6)}
-    .card{background:var(--color-surface);border:1px solid color-mix(in oklab,var(--color-text) 12%, transparent);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--shadow-sm)}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .85rem;border-radius:999px;background:color-mix(in oklab,var(--color-primary) 10%, var(--color-surface));color:var(--color-primary);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.9rem 1.1rem;border-radius:999px;font-size:var(--text-sm);font-weight:700}
-    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse)}
-    .btn-primary:hover{background:var(--color-primary-hover)}
-    .btn-secondary{border:1px solid var(--color-border);background:var(--color-surface)}
-    .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in oklab,var(--color-bg) 78%, transparent);border-bottom:1px solid var(--color-divider)}
-    .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
-    .brand{display:flex;align-items:center;gap:.8rem;font-weight:700}
-    .brand svg{width:2rem;height:2rem}
-    .header-actions{display:flex;align-items:center;gap:.75rem}
-    .hero{padding-block:clamp(4rem,10vw,8rem)}
-    .hero-grid,.two-col{display:grid;grid-template-columns:1.25fr .9fr;gap:var(--space-8);align-items:start}
-    .stats,.cards-3,.cards-2,.faq-list,.timeline{display:grid;gap:var(--space-4)}
-    .cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .timeline article{position:relative;padding-left:1.25rem}
-    .timeline article::before{content:"";position:absolute;left:0;top:.5rem;width:.55rem;height:.55rem;border-radius:999px;background:var(--color-primary)}
-    .kpi{padding:var(--space-4);border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid var(--color-border)}
-    .table-wrap{overflow:auto;border:1px solid var(--color-border);border-radius:var(--radius-xl);background:var(--color-surface)}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:1rem;vertical-align:top;border-bottom:1px solid var(--color-divider);text-align:left}
-    th{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted)}
-    .faq-item summary{cursor:pointer;list-style:none;font-weight:700;padding:1rem 0}
-    .faq-item summary::-webkit-details-marker{display:none}
-    .faq-item p{padding:0 0 1rem;color:var(--color-text-muted)}
-    .cta-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-6);align-items:center;background:linear-gradient(135deg,color-mix(in oklab,var(--color-primary) 9%, var(--color-surface)),var(--color-surface));}
-    .footer{padding-block:var(--space-8);border-top:1px solid var(--color-divider)}
-    .muted{color:var(--color-text-muted)}
-    .prose p,.prose li{max-width:72ch}
-    .prose p + p{margin-top:1rem}
-    .anchor-nav{display:flex;flex-wrap:wrap;gap:.75rem}
-    .anchor-nav a{padding:.5rem .8rem;border-radius:999px;background:var(--color-surface);border:1px solid var(--color-border);font-size:var(--text-sm)}
-    @media (max-width: 980px){.hero-grid,.two-col,.cta-panel,.cards-3,.cards-2{grid-template-columns:1fr}.display{max-width:18ch}.site-header__inner{align-items:flex-start;flex-direction:column}}
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-  </style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
+<meta property="og:site_name" content="{{REGISTRY_NAME}}">
+
+<!-- JSON-LD PLACEHOLDER -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+   {"@type":"WebSite","name":"{{REGISTRY_NAME}}","url":"{{ROOT_URL}}"},
+   {"@type":"WebPage",
+    "name":"{{TITLE}}",
+    "url":"{{CANONICAL_URL}}",
+    "description":"{{META_DESCRIPTION}}",
+    "inLanguage":"en"},
+   {"@type":"ProfessionalService",
+    "name":"{{DOMAIN}}",
+    "areaServed":"{{COUNTRY}}"}
+ ]
+}
+</script>
+
+<link rel="stylesheet" href="/css/registry.css">
 </head>
+
 <body>
-  <a class="sr-only" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="#top" aria-label="{{SITE_NAME}} home">
-        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <rect x="4" y="4" width="40" height="40" rx="12" stroke="currentColor" stroke-width="2"></rect>
-          <path d="M15 30L24 18L33 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span>{{SITE_NAME}}</span>
-      </a>
-      <div class="header-actions">
-        <nav class="anchor-nav" aria-label="Primary">
-          <a href="#overview">Overview</a>
-          <a href="#process">Process</a>
-          <a href="#framework">Framework</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <button type="button" data-theme-toggle aria-label="Switch theme">◐</button>
-      </div>
-    </div>
-  </header>
+<header>
 
-  <main id="main-content">
-    <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="grid">
-          <span class="pill">Cross-Border {{PRIMARY_SERVICE}}</span>
-          <p class="eyebrow">{{BREADCRUMB_ROOT}} / {{PRIMARY_SERVICE}} / {{JURISDICTION}}</p>
-          <h1 class="display">{{H1_HEADLINE}}</h1>
-          <p class="lead">{{HERO_LEAD}}</p>
-          <div class="header-actions">
-            <a class="btn btn-primary" href="#cta">{{PRIMARY_CTA_LABEL}}</a>
-            <a class="btn btn-secondary" href="#framework">{{SECONDARY_CTA_LABEL}}</a>
-          </div>
-        </div>
-        <aside class="card grid" aria-labelledby="snapshot-title">
-          <h2 id="snapshot-title">Page snapshot</h2>
-          <div class="stats cards-2">
-            <div class="kpi"><div class="eyebrow">Object</div><div>{{PRIMARY_SERVICE}}</div></div>
-            <div class="kpi"><div class="eyebrow">Jurisdiction</div><div>{{JURISDICTION}}</div></div>
-            <div class="kpi"><div class="eyebrow">Audience</div><div>{{PRIMARY_AUDIENCE}}</div></div>
-            <div class="kpi"><div class="eyebrow">Use case</div><div>{{PRIMARY_USE_CASE}}</div></div>
-          </div>
-          <p class="muted">{{SNAPSHOT_NOTE}}</p>
-        </aside>
-      </div>
-    </section>
+<nav>
+Home →
+{{DOMAIN}} →
+{{COUNTRY}}
+</nav>
 
-    <section id="overview" class="section">
-      <div class="container two-col">
-        <div class="prose grid">
-          <span class="eyebrow">Overview</span>
-          <h2>{{PRIMARY_SERVICE}} in {{JURISDICTION}}</h2>
-          <p>{{OVERVIEW_P1}}</p>
-          <p>{{OVERVIEW_P2}}</p>
-        </div>
-        <div class="card grid">
-          <h3>Identity patterns</h3>
-          <p class="muted">Examples of buyer-seller, employer-employee, licensor-licensee, parent-subsidiary, or advisor-client combinations that fit this page.</p>
-          <div class="table-wrap">
-            <table>
-              <tbody>
-                <tr><th>Pattern 1</th><td>{{IDENTITY_PATTERN_1}}</td></tr>
-                <tr><th>Pattern 2</th><td>{{IDENTITY_PATTERN_2}}</td></tr>
-                <tr><th>Pattern 3</th><td>{{IDENTITY_PATTERN_3}}</td></tr>
-                <tr><th>Pattern 4</th><td>{{IDENTITY_PATTERN_4}}</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
+<pre>
+REGISTRY.......................{{REGISTRY_NAME}}
+OBJECT ID......................{{OBJECT_ID}}
+OBJECT TYPE....................{{OBJECT_TYPE}}
+STATUS.........................ACTIVE
+DOMAIN.........................{{DOMAIN}}
+SUBDOMAIN......................{{SUBDOMAIN}}
+SPECIALIZATION.................{{SPECIALIZATION}}
+JURISDICTION...................{{COUNTRY}}
+CHECKSUM.......................{{CHECKSUM}}
+</pre>
 
-    <section class="section">
-      <div class="container-wide grid">
-        <span class="eyebrow">Use cases</span>
-        <div class="cards-3">
-          <article class="card"><h3>{{SCENARIO_TITLE_1}}</h3><p class="muted">{{SCENARIO_TEXT_1}}</p></article>
-          <article class="card"><h3>{{SCENARIO_TITLE_2}}</h3><p class="muted">{{SCENARIO_TEXT_2}}</p></article>
-          <article class="card"><h3>{{SCENARIO_TITLE_3}}</h3><p class="muted">{{SCENARIO_TEXT_3}}</p></article>
-        </div>
-      </div>
-    </section>
+<h1>{{DOMAIN}}</h1>
 
-    <section id="process" class="section">
-      <div class="container two-col">
-        <div class="grid">
-          <span class="eyebrow">Process</span>
-          <h2>{{PROCESS_TITLE}}</h2>
-          <p class="lead">{{PROCESS_LEAD}}</p>
-        </div>
-        <div class="timeline">
-          <article><h3>1. {{PROCESS_STEP_1_TITLE}}</h3><p class="muted">{{PROCESS_STEP_1_TEXT}}</p></article>
-          <article><h3>2. {{PROCESS_STEP_2_TITLE}}</h3><p class="muted">{{PROCESS_STEP_2_TEXT}}</p></article>
-          <article><h3>3. {{PROCESS_STEP_3_TITLE}}</h3><p class="muted">{{PROCESS_STEP_3_TEXT}}</p></article>
-          <article><h3>4. {{PROCESS_STEP_4_TITLE}}</h3><p class="muted">{{PROCESS_STEP_4_TEXT}}</p></article>
-          <article><h3>5. {{PROCESS_STEP_5_TITLE}}</h3><p class="muted">{{PROCESS_STEP_5_TEXT}}</p></article>
-          <article><h3>6. {{PROCESS_STEP_6_TITLE}}</h3><p class="muted">{{PROCESS_STEP_6_TEXT}}</p></article>
-          <article><h3>7. {{PROCESS_STEP_7_TITLE}}</h3><p class="muted">{{PROCESS_STEP_7_TEXT}}</p></article>
-        </div>
-      </div>
-    </section>
+<h2>{{COUNTRY}} — CROSS-BORDER CONTEXT</h2>
 
-    <section id="framework" class="section">
-      <div class="container-wide grid">
-        <span class="eyebrow">Framework</span>
-        <h2>Jurisdiction and service framework</h2>
-        <div class="table-wrap">
-          <table>
-            <tbody>
-              <tr><th>Definition</th><td>{{SERVICE_DEFINITION}}</td></tr>
-              <tr><th>Object type</th><td>{{OBJECT_TYPE}}</td></tr>
-              <tr><th>Classification</th><td>{{CLASSIFICATION}}</td></tr>
-              <tr><th>Legal culture</th><td>{{LEGAL_CULTURE}}</td></tr>
-              <tr><th>Authority model</th><td>{{AUTHORITY_MODEL}}</td></tr>
-              <tr><th>Licensing / regulation</th><td>{{LICENSING_ENVIRONMENT}}</td></tr>
-              <tr><th>Data / compliance</th><td>{{DATA_COMPLIANCE}}</td></tr>
-              <tr><th>Language expectations</th><td>{{LANGUAGE_EXPECTATION}}</td></tr>
-              <tr><th>Cross-border route</th><td>{{CROSS_BORDER_ROUTE}}</td></tr>
-              <tr><th>Applicable sources</th><td>{{APPLICABLE_LAW_LIST}}</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+</header>
 
-    <section class="section">
-      <div class="container-wide cards-2">
-        <article class="card grid">
-          <span class="eyebrow">Inputs</span>
-          <h2>Required inputs</h2>
-          <ul role="list" class="grid muted">
-            <li>{{INPUT_1}}</li>
-            <li>{{INPUT_2}}</li>
-            <li>{{INPUT_3}}</li>
-            <li>{{INPUT_4}}</li>
-            <li>{{INPUT_5}}</li>
-          </ul>
-        </article>
-        <article class="card grid">
-          <span class="eyebrow">Capabilities</span>
-          <h2>Core competences</h2>
-          <ul role="list" class="grid muted">
-            <li>{{COMPETENCE_1}}</li>
-            <li>{{COMPETENCE_2}}</li>
-            <li>{{COMPETENCE_3}}</li>
-            <li>{{COMPETENCE_4}}</li>
-            <li>{{COMPETENCE_5}}</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+<section>
+<h2>OBJECT POSITION</h2>
+<pre>
+Business
+  Operations
+    {{DOMAIN}}
+      {{SUBDOMAIN}}
+        {{SPECIALIZATION}}
+          {{COUNTRY}}
+</pre>
+</section>
 
-    <section class="section">
-      <div class="container-wide cards-2">
-        <article class="card grid">
-          <span class="eyebrow">Commercial signals</span>
-          <h2>Typical business events</h2>
-          <p class="muted">{{BUSINESS_EVENTS}}</p>
-          <h3>Exclusions</h3>
-          <p class="muted">{{EXCLUSIONS}}</p>
-        </article>
-        <article class="card grid">
-          <span class="eyebrow">Market context</span>
-          <h2>Optional market evidence</h2>
-          <p class="muted">{{MARKET_SCALE}}</p>
-          <p class="muted">{{VOLUNTARY_RESOLUTION_RATE}}</p>
-          <p class="muted">{{TIMELINE_NOTE}}</p>
-        </article>
-      </div>
-    </section>
+<main>
 
-    <section id="faq" class="section">
-      <div class="container two-col">
-        <div class="grid">
-          <span class="eyebrow">FAQ</span>
-          <h2>Common questions</h2>
-          <p class="lead">Use this block for search-friendly, direct-answer content aligned with the page intent.</p>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item card" open><summary>{{FAQ_1_QUESTION}}</summary><p>{{FAQ_1_ANSWER}}</p></details>
-          <details class="faq-item card"><summary>{{FAQ_2_QUESTION}}</summary><p>{{FAQ_2_ANSWER}}</p></details>
-          <details class="faq-item card"><summary>{{FAQ_3_QUESTION}}</summary><p>{{FAQ_3_ANSWER}}</p></details>
-          <details class="faq-item card"><summary>{{FAQ_4_QUESTION}}</summary><p>{{FAQ_4_ANSWER}}</p></details>
-        </div>
-      </div>
-    </section>
+<section><h2>OBJECT DEFINITION</h2>{{OBJECT_DEFINITION}}</section>
 
-    <section id="cta" class="section">
-      <div class="container">
-        <div class="card cta-panel">
-          <div class="grid">
-            <span class="eyebrow">Call to action</span>
-            <h2>{{CTA_TITLE}}</h2>
-            <p class="muted">{{CTA_TEXT}}</p>
-          </div>
-          <div class="grid">
-            <a class="btn btn-primary" href="{{CTA_URL}}">{{CTA_BUTTON}}</a>
-            <p class="muted">{{CTA_SUPPORTING_NOTE}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<section><h2>EXECUTIVE SUMMARY</h2>{{EXECUTIVE_SUMMARY}}</section>
 
-  <footer class="footer">
-    <div class="container grid">
-      <p>{{FOOTER_COPY}}</p>
-      <p class="muted">Template note: keep one H1, one canonical, jurisdiction-specific legal sources, direct-answer FAQ, and schema aligned with the visible page content.</p>
-    </div>
-  </footer>
+<section><h2>PRIMARY OUTCOME</h2>{{PRIMARY_OUTCOME}}</section>
 
-  <script>
-    (function(){
-      const btn=document.querySelector('[data-theme-toggle]');
-      const root=document.documentElement;
-      let mode=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-      root.setAttribute('data-theme',mode);
-      function sync(){btn.textContent=mode==='dark'?'☀':'◐';btn.setAttribute('aria-label','Switch to '+(mode==='dark'?'light':'dark')+' mode');}
-      sync();
-      btn&&btn.addEventListener('click',()=>{mode=mode==='dark'?'light':'dark';root.setAttribute('data-theme',mode);sync();});
-    })();
-  </script>
+<section><h2>REQUEST CONTEXTS</h2>{{REQUEST_CONTEXTS}}</section>
 
-  <!--
-  TEMPLATE FIELD GUIDE
-  - Replace every {{TOKEN}} before publishing.
-  - Keep page intent narrow: one service + one jurisdiction per page.
-  - Recommended slug pattern: /cross-border/{{service-slug}}-{{jurisdiction-slug}}/
-  - Keep visible FAQ answers aligned with JSON-LD FAQ answers.
-  - Reuse the same structure for pages like:
-      Cross-Border Employment Law in Germany
-      Cross-Border Commercial Contracts in France
-      Cross-Border VAT in Italy
-      Cross-Border Transfer Pricing in Poland
-      Cross-Border Payroll in Sweden
-  - GEO / SEO checklist baked in here:
-      1) title + meta description + canonical + hreflang
-      2) one H1 matching intent
-      3) schema aligned to the visible entity
-      4) direct-answer overview, framework, process, FAQ
-      5) internal anchors for crawlability and UX
-      6) semantically grouped tables and lists for extractive engines
-      7) no filler copy; every block should answer a real query
-  -->
+<section><h2>TYPICAL SCENARIO</h2>{{TYPICAL_SCENARIO}}</section>
+
+<section><h2>NOT SUITABLE WHEN</h2>{{EXCLUSIONS}}</section>
+
+<section><h2>COUNTRY CHARACTERISTICS</h2>{{COUNTRY_CHARACTERISTICS}}</section>
+
+<section><h2>KEY AUTHORITIES</h2>{{KEY_AUTHORITIES}}</section>
+
+<section><h2>TYPICAL TIMELINE</h2>{{TIMELINE}}</section>
+
+<section><h2>TYPICAL TIMEFRAMES</h2>{{TIMEFRAMES}}</section>
+
+<section><h2>CROSS-BORDER RELEVANCE</h2>{{CROSS_BORDER}}</section>
+
+<section><h2>OPERATING CONSTRAINTS</h2>{{OPERATING_CONSTRAINTS}}</section>
+
+<section><h2>PURPOSE</h2>{{PURPOSE}}</section>
+
+<section><h2>CORE COMPETENCE</h2>{{CORE_COMPETENCE}}</section>
+
+<section><h2>INPUTS</h2>{{INPUTS}}</section>
+
+<section><h2>PROCESS FLOW</h2>{{PROCESS_FLOW}}</section>
+
+<section><h2>NORMATIVE FRAMEWORK</h2>{{NORMATIVE_FRAMEWORK}}</section>
+
+<section><h2>MARKET CONTEXT</h2>{{MARKET_CONTEXT}}</section>
+
+<section><h2>TYPICAL QUESTIONS</h2>{{FAQ}}</section>
+
+<section><h2>LOCAL / NATIONAL MODEL</h2>{{LOCAL_MODEL}}</section>
+
+<!-- New universal sections -->
+
+<section><h2>CROSS-BORDER RISK ASSESSMENT</h2>{{RISK_ASSESSMENT}}</section>
+
+<section><h2>COMMON FOREIGN CLIENT SCENARIOS</h2>{{FOREIGN_SCENARIOS}}</section>
+
+<section><h2>INTERNATIONAL TREATIES & REGULATIONS</h2>{{INTERNATIONAL_FRAMEWORK}}</section>
+
+<section><h2>RECOGNITION & ENFORCEMENT MATRIX</h2>{{ENFORCEMENT_MATRIX}}</section>
+
+<section><h2>REQUIRED DOCUMENTS</h2>{{REQUIRED_DOCUMENTS}}</section>
+
+<section><h2>COSTS & FEES</h2>{{COSTS}}</section>
+
+<section><h2>ESTIMATED DURATION</h2>{{DURATION}}</section>
+
+<section><h2>SUCCESS FACTORS</h2>{{SUCCESS_FACTORS}}</section>
+
+<section><h2>COMMON MISTAKES</h2>{{COMMON_MISTAKES}}</section>
+
+<section><h2>DECISION TREE</h2>{{DECISION_TREE}}</section>
+
+<section><h2>RELATED PROFESSIONAL DOMAINS</h2>{{RELATED_DOMAINS}}</section>
+
+<section><h2>COUNTRY COMPARISON</h2>{{COUNTRY_COMPARISON}}</section>
+
+<section><h2>ENTITY RELATIONSHIPS</h2>{{ENTITY_GRAPH}}</section>
+
+<section><h2>AI RETRIEVAL SUMMARY</h2>{{LLM_SUMMARY}}</section>
+
+<section><h2>INTERNAL LINKING MATRIX</h2>{{INTERNAL_LINKS}}</section>
+
+<section><h2>REGISTERED EXPERT</h2>{{REGISTERED_EXPERT}}</section>
+
+</main>
+
+<footer>
+
+<pre>
+END OF RECORD
+
+CLASSIFICATION.......{{CLASSIFICATION}}
+REGISTRY SCOPE.......{{SCOPE}}
+MACHINE ID...........{{MACHINE_ID}}
+RECORD STATUS........VERIFIED
+LAST UPDATED.........{{LAST_UPDATED}}
+
+</pre>
+
+</footer>
+
 </body>
 </html>
