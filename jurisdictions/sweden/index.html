@@ -1,485 +1,425 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employment Law Sweden | POR Registry Object</title>
-  <meta name="description" content="GitHub Pages-ready HTML registry object template for Employment Law Sweden, structured under the POR Registry Constitution.">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://example.github.io/employment-law-sweden/">
-  <meta property="og:title" content="Employment Law Sweden | POR Registry Object">
-  <meta property="og:description" content="Structured registry object for Employment Law Sweden based on the POR Registry Constitution.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.github.io/employment-law-sweden/">
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
-  <style>
-    :root, [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
-      --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
-      --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
-      --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #fbfbf9;
-      --color-surface-offset: #f3f0ec; --color-border: #d4d1ca; --color-divider: #dcd9d5;
-      --color-text: #28251d; --color-text-muted: #6f6d67; --color-text-faint: #9f9c95;
-      --color-text-inverse: #f9f8f4; --color-primary: #01696f; --color-primary-hover: #0c4e54;
-      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
-      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06); --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
-      --content-default: 960px; --content-wide: 1200px;
-      --font-display: 'Boska', Georgia, serif; --font-body: 'Satoshi', Inter, sans-serif;
-      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    [data-theme="dark"] {
-      --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d;
-      --color-surface-offset: #1d1c1a; --color-border: #393836; --color-divider: #262523;
-      --color-text: #cdccca; --color-text-muted: #989792; --color-text-faint: #6c6a66;
-      --color-text-inverse: #2b2a28; --color-primary: #4f98a3; --color-primary-hover: #227f8b;
-      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2); --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      min-height: 100dvh; line-height: 1.6; font-family: var(--font-body); font-size: var(--text-base);
-      color: var(--color-text); background: var(--color-bg);
-    }
-    img, svg { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { cursor: pointer; border: 0; background: none; color: inherit; }
-    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
-    .skip-link { position: absolute; left: var(--space-4); top: -3rem; background: var(--color-primary); color: var(--color-text-inverse); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full, 999px); z-index: 20; }
-    .skip-link:focus { top: var(--space-4); }
-    .site-header {
-      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
-      background: color-mix(in oklab, var(--color-bg) 82%, transparent);
-      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
-    }
-    .header-inner, .container { width: min(calc(100% - 2rem), var(--content-wide)); margin: 0 auto; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; gap: var(--space-4); }
-    .brand { display: flex; align-items: center; gap: var(--space-3); font-weight: 700; }
-    .brand-mark { width: 2.1rem; height: 2.1rem; color: var(--color-primary); }
-    .brand-meta small { display: block; color: var(--color-text-muted); font-size: var(--text-xs); letter-spacing: 0.06em; text-transform: uppercase; }
-    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
-    .theme-toggle, .nav-link {
-      min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;
-      border-radius: var(--radius-full, 999px); transition: background var(--transition-interactive), color var(--transition-interactive);
-    }
-    .theme-toggle:hover, .nav-link:hover { background: var(--color-surface-offset); }
-    .hero { padding: clamp(var(--space-12), 8vw, var(--space-20)) 0 var(--space-10); }
-    .eyebrow { color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.12em; font-size: var(--text-xs); font-weight: 700; }
-    h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; }
-    h1 { font-size: var(--text-2xl); max-width: 12ch; margin-top: var(--space-4); }
-    h2 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
-    h3 { font-size: var(--text-lg); }
-    p { max-width: 72ch; }
-    .hero-grid { display: grid; gap: var(--space-8); align-items: start; }
-    .hero-card, .section-card, .toc, .meta-grid article {
-      background: var(--color-surface); border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
-      border-radius: var(--radius-xl); box-shadow: var(--shadow-sm);
-    }
-    .hero-card { padding: var(--space-6); }
-    .hero-card p + p { margin-top: var(--space-3); }
-    .meta-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-4); margin-top: var(--space-6);
-    }
-    .meta-grid article { padding: var(--space-4); }
-    .meta-grid span { display: block; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; }
-    .layout { display: grid; gap: var(--space-8); padding-bottom: var(--space-16); }
-    .toc { padding: var(--space-5); align-self: start; }
-    .toc h2 { font-size: var(--text-lg); font-family: var(--font-body); margin-bottom: var(--space-4); }
-    .toc ul { list-style: none; display: grid; gap: var(--space-2); }
-    .toc a { display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); color: var(--color-text-muted); }
-    .toc a:hover { background: var(--color-surface-offset); color: var(--color-text); }
-    main section { scroll-margin-top: 6rem; }
-    .section-card { padding: var(--space-6); margin-bottom: var(--space-6); }
-    .section-card > p + * { margin-top: var(--space-4); }
-    .split { display: grid; gap: var(--space-5); }
-    .pill-list, .question-list { list-style: none; display: grid; gap: var(--space-3); }
-    .pill-list li, .question-list li, .matrix li {
-      padding: var(--space-3) var(--space-4); background: var(--color-surface-2);
-      border: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent); border-radius: var(--radius-lg);
-    }
-    .matrix { display: grid; gap: var(--space-3); }
-    .entity-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
-    .entity-table th, .entity-table td { text-align: left; padding: var(--space-3); border-bottom: 1px solid var(--color-divider); vertical-align: top; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 0.4rem; background: color-mix(in oklab, var(--color-primary) 12%, var(--color-surface));
-      color: var(--color-primary); border-radius: 999px; padding: 0.4rem 0.8rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-    }
-    .muted { color: var(--color-text-muted); }
-    .code-block {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--text-sm);
-      background: var(--color-surface-offset); border-radius: var(--radius-lg); padding: var(--space-4); overflow-x: auto;
-      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
-    }
-    .site-footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-12); color: var(--color-text-muted); }
-    @media (min-width: 960px) {
-      .hero-grid { grid-template-columns: 1.35fr 0.95fr; }
-      .layout { grid-template-columns: 280px 1fr; align-items: start; }
-      .toc { position: sticky; top: 6rem; }
-      .split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  </style>
+  <title>Employment Law Sweden | Registry Object</title>
+  <meta name="description" content="Structured Employment Law Sweden registry object with Swedish labour law authorities, legislation, cross-border context and expert-ready semantic markup.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://employmentlawregistry.org/sweden/employment-law-sweden">
+  <meta property="og:title" content="Employment Law Sweden | Registry Object">
+  <meta property="og:description" content="Canonical registry object for Swedish employment law, authorities, legislation, disputes, compliance and cross-border relevance.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://employmentlawregistry.org/sweden/employment-law-sweden">
+  <meta property="og:site_name" content="Employment Law Registry">
+  <link rel="stylesheet" href="./registry.css">
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Employment Law Sweden home">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <rect x="10" y="10" width="44" height="44" rx="12" stroke="currentColor" stroke-width="4"></rect>
-          <path d="M22 41V23h10.5c6 0 9.5 3.2 9.5 8.3S38.5 41 32.5 41H22Z" stroke="currentColor" stroke-width="4"></path>
-          <path d="M28 29h7" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
-        </svg>
-        <div class="brand-meta">
-          Employment Law Sweden
-          <small>POR Registry Object</small>
-        </div>
-      </a>
-      <div class="header-actions">
-        <a class="nav-link" href="#identity">Start</a>
-        <a class="nav-link" href="#metadata">Metadata</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
+    <div class="container header-inner">
+      <div class="brand-block">
+        <p class="eyebrow">Professional Object Registry</p>
+        <h1>Employment Law Sweden</h1>
+        <p class="lead">A structured registry object covering Swedish labour and employment law, key authorities, statutes, dispute pathways, and cross-border relevance for employers, employees and advisers.</p>
       </div>
+      <nav aria-label="Primary">
+        <ul class="inline-nav">
+          <li><a href="#identity">Identity</a></li>
+          <li><a href="#authorities">Authorities</a></li>
+          <li><a href="#legislation">Legislation</a></li>
+          <li><a href="#cross-border">Cross-Border</a></li>
+          <li><a href="#metadata">Metadata</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main id="content">
-    <section class="hero container" id="top">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Sweden · Labour & employment</p>
-          <h1>Employment Law Sweden rendered as a POR-ready GitHub Pages document.</h1>
-          <p class="muted" style="margin-top: var(--space-4);">This page is a structured HTML foundation built from the uploaded POR Constitution. It follows the mandatory registry-object order and is ready to be filled with verified Swedish employment-law content from official sources.</p>
-          <div class="meta-grid">
-            <article><span>Classification</span> Registry Object</article>
-            <article><span>Domain</span> Employment Law</article>
-            <article><span>Jurisdiction</span> Sweden</article>
-            <article><span>Status</span> Draft template</article>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <span class="badge">GitHub Pages ready</span>
-          <p><strong>Use:</strong> publish as a static page in a GitHub Pages repository, or adapt the section content into JSON-LD, markdown, PDF, and API outputs.</p>
-          <p><strong>Important:</strong> the POR Constitution states that HTML is presentation only, while the same registry object should render consistently across HTML, PDF, Markdown, JSON, JSON-LD, XML, API, and LLM feeds.</p>
-          <p><strong>Next step:</strong> replace placeholder text with verified Swedish authorities, legislation, standards, and cross-border analysis.</p>
-        </aside>
+  <main id="main-content" class="container page-grid">
+    <aside class="sidebar" aria-label="Table of contents">
+      <div class="panel sticky">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#identity">Identity</a></li>
+          <li><a href="#executive-summary">Executive Summary</a></li>
+          <li><a href="#object-definition">Object Definition</a></li>
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#primary-outcome">Primary Outcome</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#object-dna">Object DNA</a></li>
+          <li><a href="#ai-summary">AI Retrieval Summary</a></li>
+          <li><a href="#knowledge-graph">Knowledge Graph</a></li>
+          <li><a href="#entity-index">Entity Index</a></li>
+          <li><a href="#authorities">Authorities</a></li>
+          <li><a href="#legislation">Legislation</a></li>
+          <li><a href="#standards">Standards</a></li>
+          <li><a href="#bodies">Professional Bodies</a></li>
+          <li><a href="#users">Typical Users</a></li>
+          <li><a href="#scenarios">Typical Scenarios</a></li>
+          <li><a href="#decision-tree">Decision Tree</a></li>
+          <li><a href="#process-matrix">Process Matrix</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#documents">Required Documents</a></li>
+          <li><a href="#cross-border">Cross-Border Relevance</a></li>
+          <li><a href="#treaties">International Treaties</a></li>
+          <li><a href="#risks">Risks & Constraints</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#related">Related Registry Objects</a></li>
+          <li><a href="#expert">Registered Expert</a></li>
+          <li><a href="#metadata">Machine Readable Metadata</a></li>
+        </ol>
       </div>
-    </section>
+    </aside>
 
-    <div class="container layout">
-      <nav class="toc" aria-label="Table of contents">
-        <h2>Sections</h2>
+    <div class="content-column">
+      <section id="identity" class="panel hero-panel">
+        <p class="kicker">Registry Identity</p>
+        <div class="meta-grid two-col">
+          <div><strong>Registry Name</strong><span>Professional Object Registry</span></div>
+          <div><strong>Registry ID</strong><span>POR</span></div>
+          <div><strong>Object ID</strong><span>employment-law-sweden</span></div>
+          <div><strong>Version</strong><span>2.0-draft</span></div>
+          <div><strong>Status</strong><span>Substantive draft</span></div>
+          <div><strong>Classification</strong><span>Registry Object</span></div>
+          <div><strong>Domain</strong><span>Employment Law</span></div>
+          <div><strong>Subdomain</strong><span>Labour & Workplace Regulation</span></div>
+          <div><strong>Specialization</strong><span>Swedish Employment Law</span></div>
+          <div><strong>Jurisdiction</strong><span>Sweden</span></div>
+          <div><strong>Country</strong><span>Sweden</span></div>
+          <div><strong>Language</strong><span>English</span></div>
+          <div><strong>Publication Date</strong><span>2026-07-08</span></div>
+          <div><strong>Last Updated</strong><span>2026-07-08</span></div>
+          <div><strong>Record Integrity</strong><span>Editorial review required</span></div>
+          <div><strong>Checksum</strong><span>Pending publication build</span></div>
+        </div>
+      </section>
+
+      <section id="executive-summary" class="panel">
+        <h2>Executive Summary</h2>
+        <p>Employment Law Sweden is a structured knowledge object describing the legal framework that governs employment relationships in Sweden. The object covers core statutes, labour institutions, dispute pathways, work environment oversight, collective bargaining relevance, common employer obligations, employee protections and the cross-border issues that arise when foreign businesses employ or post workers in Sweden.</p>
+        <p>Swedish labour law operates through a combination of statute, collective agreements, administrative supervision and labour-court practice. Any serious treatment of the field must therefore separate binding law from practical application and commentary while preserving clear links between authorities, legislation and workplace scenarios.</p>
+      </section>
+
+      <section id="object-definition" class="panel">
+        <h2>Object Definition</h2>
+        <p>This registry object defines Swedish employment law as a jurisdiction-aware legal and compliance domain rather than as a marketing page. It is designed for human readers, machine consumption and AI retrieval, with stable sections, semantic relationships and machine-readable metadata that can be reused across HTML, JSON-LD, API and future registry outputs.</p>
+      </section>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>The purpose of this object is to provide a neutral, evidence-led reference layer for understanding how employment law functions in Sweden. It is intended to support legal orientation, compliance planning, internal knowledge systems, GEO-focused publication and expert-authored updates over time.</p>
+      </section>
+
+      <section id="primary-outcome" class="panel">
+        <h2>Primary Outcome</h2>
+        <p>The primary outcome is a canonical Swedish employment-law registry asset that can answer high-intent questions consistently across search, AI summaries, internal knowledge workflows and public registry pages.</p>
+      </section>
+
+      <section id="scope" class="panel">
+        <h2>Scope</h2>
         <ul>
-          <li><a href="#identity">1. Identity</a></li>
-          <li><a href="#executive-summary">2. Executive Summary</a></li>
-          <li><a href="#object-definition">3. Object Definition</a></li>
-          <li><a href="#purpose">4. Purpose</a></li>
-          <li><a href="#primary-outcome">5. Primary Outcome</a></li>
-          <li><a href="#scope">6. Scope</a></li>
-          <li><a href="#object-dna">7. Object DNA</a></li>
-          <li><a href="#ai-summary">8. AI Retrieval Summary</a></li>
-          <li><a href="#knowledge-graph">9. Knowledge Graph</a></li>
-          <li><a href="#entity-index">10. Entity Index</a></li>
-          <li><a href="#authorities">11. Authorities</a></li>
-          <li><a href="#legislation">12. Legislation</a></li>
-          <li><a href="#standards">13. Standards</a></li>
-          <li><a href="#bodies">14. Professional Bodies</a></li>
-          <li><a href="#users">15. Typical Users</a></li>
-          <li><a href="#scenarios">16. Typical Scenarios</a></li>
-          <li><a href="#decision-tree">17. Decision Tree</a></li>
-          <li><a href="#process-matrix">18. Process Matrix</a></li>
-          <li><a href="#timeline">19. Timeline</a></li>
-          <li><a href="#documents">20. Required Documents</a></li>
-          <li><a href="#cross-border">21. Cross-Border Relevance</a></li>
-          <li><a href="#treaties">22. International Treaties</a></li>
-          <li><a href="#risks">23. Risks & Constraints</a></li>
-          <li><a href="#faq">24. FAQ</a></li>
-          <li><a href="#related">25. Related Registry Objects</a></li>
-          <li><a href="#expert">26. Registered Expert</a></li>
-          <li><a href="#metadata">27. Machine Readable Metadata</a></li>
+          <li>Formation and content of employment relationships, including contract structures and probation.</li>
+          <li>Collective agreements, co-determination and the institutional role of unions and employer organizations.</li>
+          <li>Working time, leave, work environment, discrimination-adjacent employee protection and related compliance duties.</li>
+          <li>Termination, redundancy, labour disputes and court processes.</li>
+          <li>Cross-border employment, including posting of workers and foreign-employer scenarios.</li>
         </ul>
-      </nav>
+      </section>
 
-      <div>
-        <section id="identity" class="section-card">
-          <h2>Identity</h2>
-          <div class="split">
-            <div class="code-block">Registry Name: Professional Object Registry\nRegistry ID: POR\nObject ID: employment-law-sweden\nVersion: 1.0.0\nStatus: Draft\nClassification: Registry Object\nDomain: Employment Law\nSubdomain: Labour & Workplace Regulation\nSpecialization: Swedish Employment Law\nJurisdiction: National\nCountry: Sweden\nLanguage: English\nPublication Date: 2026-07-08\nLast Updated: 2026-07-08\nRecord Integrity: Pending validation\nChecksum: To be generated</div>
-            <div>
-              <p>This identity block reflects the mandatory object identity fields required by the Constitution.</p>
-              <p class="muted">Replace version, dates, checksum, and integrity values during your publication workflow.</p>
-            </div>
-          </div>
-        </section>
+      <section id="object-dna" class="panel">
+        <h2>Object DNA</h2>
+        <div class="meta-grid two-col">
+          <div><strong>Industry</strong><span>Legal information and compliance</span></div>
+          <div><strong>Domain</strong><span>Employment law</span></div>
+          <div><strong>Function</strong><span>Orientation, compliance, dispute pathway mapping</span></div>
+          <div><strong>Actors</strong><span>Employers, employees, unions, authorities, courts, advisers</span></div>
+          <div><strong>Authorities</strong><span>Government Offices, Labour Court, Work Environment Authority</span></div>
+          <div><strong>Legislation</strong><span>LAS, MBL, Annual Leave Act, Work Environment Act, Working Hours Act and related instruments</span></div>
+          <div><strong>Country</strong><span>Sweden</span></div>
+          <div><strong>Cross-border status</strong><span>High relevance</span></div>
+          <div><strong>Licensing</strong><span>Source-dependent</span></div>
+          <div><strong>Digital maturity</strong><span>Structured semantic registry object</span></div>
+          <div><strong>Risk profile</strong><span>Medium to high</span></div>
+          <div><strong>Related objects</strong><span>Payroll, posting of workers, work environment, dispute resolution</span></div>
+        </div>
+      </section>
 
-        <section id="executive-summary" class="section-card">
-          <h2>Executive Summary</h2>
-          <p>Employment Law Sweden is a structured knowledge object covering the principal legal framework, institutional actors, obligations, procedures, and cross-border considerations governing employment relationships in Sweden. The final published version should distinguish primary law, administrative practice, collective bargaining context, and professional commentary.</p>
-        </section>
+      <section id="ai-summary" class="panel">
+        <h2>AI Retrieval Summary</h2>
+        <p>Employment Law Sweden is the canonical registry object for Swedish labour and employment law. It covers the main statutes governing employment protection, co-determination, annual leave, work environment, working hours, labour disputes, parental leave, worker posting and related employer obligations. It also identifies the Swedish Labour Court, Swedish Work Environment Authority and other institutional actors, and explains how collective agreements shape practice. The object is intended for employers, employees, advisers and AI retrieval systems seeking a structured overview of Swedish employment compliance and dispute issues.</p>
+        <div class="code-block">
+          <p><strong>Synonyms:</strong> Swedish employment law; Sweden labour law; labour law Sweden; workplace law Sweden.</p>
+          <p><strong>Retrieval Keywords:</strong> LAS, MBL, working hours, annual leave, work environment, labour disputes, Labour Court, posting of workers, Swedish employer obligations.</p>
+          <p><strong>Search Intent Map:</strong> understand Swedish employment law; hire employees in Sweden; manage dismissal in Sweden; review labour-law compliance; compare cross-border employment obligations.</p>
+        </div>
+      </section>
 
-        <section id="object-definition" class="section-card">
-          <h2>Object Definition</h2>
-          <p>This object defines the Swedish employment-law domain as a jurisdiction-aware registry asset rather than a conventional web page. It is designed to support human readers, machines, and AI retrieval while preserving consistent content across multiple output formats.</p>
-        </section>
+      <section id="knowledge-graph" class="panel">
+        <h2>Knowledge Graph</h2>
+        <ul>
+          <li><strong>Parent Object:</strong> Employment Law Europe.</li>
+          <li><strong>Child Objects:</strong> Employment Protection Sweden, Working Hours Sweden, Work Environment Sweden, Labour Disputes Sweden.</li>
+          <li><strong>Peer Objects:</strong> Payroll Sweden, Social Security Sweden, Business Immigration Sweden, Corporate Compliance Sweden.</li>
+          <li><strong>Dependencies:</strong> Swedish statutes, official guidance, court structure, collective bargaining framework, EU labour layer.</li>
+          <li><strong>Inputs:</strong> employment facts, contract type, workplace facts, collective agreement context, foreign-employer element.</li>
+          <li><strong>Outputs:</strong> legal classification, compliance action, dispute route, documentation checklist.</li>
+          <li><strong>Related Jurisdictions:</strong> European Union, Nordic region, worker home state, employer home state.</li>
+        </ul>
+      </section>
 
-        <section id="purpose" class="section-card">
-          <h2>Purpose</h2>
-          <p>The purpose of this registry object is to provide a neutral, evidence-based, and updateable structure for describing employment law in Sweden for employers, workers, legal professionals, foreign businesses, and downstream systems.</p>
-        </section>
-
-        <section id="primary-outcome" class="section-card">
-          <h2>Primary Outcome</h2>
-          <p>The primary outcome is a reliable canonical reference that can be rendered consistently in GitHub Pages HTML and reused across machine-readable and AI-readable channels.</p>
-        </section>
-
-        <section id="scope" class="section-card">
-          <h2>Scope</h2>
-          <ul class="pill-list">
-            <li>Employment contracts, onboarding, and probation rules.</li>
-            <li>Working time, leave, salary structures, and workplace obligations.</li>
-            <li>Termination, redundancy, disputes, and enforcement pathways.</li>
-            <li>Collective agreements, union context, and employer compliance duties.</li>
-            <li>Cross-border hiring and foreign-employer scenarios affecting Sweden.</li>
-          </ul>
-        </section>
-
-        <section id="object-dna" class="section-card">
-          <h2>Object DNA</h2>
-          <div class="split">
-            <ul class="pill-list">
-              <li>Industry: Legal and regulatory information.</li>
-              <li>Domain: Employment law.</li>
-              <li>Function: Compliance, guidance, legal orientation.</li>
-              <li>Actors: Employees, employers, authorities, unions, courts, advisers.</li>
-              <li>Country: Sweden.</li>
-            </ul>
-            <ul class="pill-list">
-              <li>Cross-border status: Relevant by default.</li>
-              <li>Licensing: None inherent to the object; source-dependent.</li>
-              <li>Digital maturity: Structured, semantic, reusable.</li>
-              <li>Risk profile: Medium to high, depending on dispute or compliance failure.</li>
-              <li>Related objects: Payroll, work environment, immigration, dispute resolution.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="ai-summary" class="section-card">
-          <h2>AI Retrieval Summary</h2>
-          <p>Employment Law Sweden is the canonical registry object for Swedish labour and employment law. It should summarize the main legal sources, relevant public authorities, professional actors, key employer and employee obligations, cross-border issues, and document requirements. Retrieval terms should cover employment contracts, dismissal, redundancy, working time, leave, collective agreements, labour disputes, and Swedish workplace compliance.</p>
-          <div class="code-block">Synonyms: Swedish employment law; Sweden labour law; workplace law Sweden; employer compliance Sweden\nRetrieval keywords: contracts, dismissal, redundancy, working time, leave, collective agreements, labour court, work environment, discrimination, payroll, foreign employer Sweden\nSearch intent map: learn law; check compliance; resolve dispute; hire in Sweden; compare cross-border obligations</div>
-        </section>
-
-        <section id="knowledge-graph" class="section-card">
-          <h2>Knowledge Graph</h2>
-          <ul class="pill-list">
-            <li>Parent Object: Labour Law Europe.</li>
-            <li>Child Objects: Employment Contracts Sweden, Dismissal Sweden, Working Time Sweden.</li>
-            <li>Peer Objects: Payroll Sweden, Work Environment Sweden, Discrimination Law Sweden.</li>
-            <li>Dependencies: Swedish statutes, collective agreements, official guidance, court decisions.</li>
-            <li>Related Jurisdictions: EU, Nordic countries, foreign employer home jurisdiction.</li>
-          </ul>
-        </section>
-
-        <section id="entity-index" class="section-card">
-          <h2>Entity Index</h2>
-          <table class="entity-table">
+      <section id="entity-index" class="panel">
+        <h2>Entity Index</h2>
+        <div class="table-wrap">
+          <table>
             <thead>
-              <tr><th>Name</th><th>Type</th><th>Role</th><th>Jurisdiction</th><th>Relationship</th></tr>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Role</th>
+                <th>Jurisdiction</th>
+                <th>Relationship</th>
+                <th>Official Website</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Swedish Work Environment Authority</td><td>Authority</td><td>Workplace oversight</td><td>Sweden</td><td>Supervisory relevance</td></tr>
-              <tr><td>Swedish Labour Court</td><td>Court</td><td>Employment dispute resolution</td><td>Sweden</td><td>Adjudicative relevance</td></tr>
-              <tr><td>Employer organizations</td><td>Professional body</td><td>Collective bargaining and guidance</td><td>Sweden</td><td>Professional ecosystem</td></tr>
-              <tr><td>Trade unions</td><td>Professional body</td><td>Worker representation</td><td>Sweden</td><td>Collective framework</td></tr>
+              <tr>
+                <td>Government Offices of Sweden</td>
+                <td>Government</td>
+                <td>Publishes labour-law policy pages and non-official statute translations</td>
+                <td>Sweden</td>
+                <td>Primary public source layer</td>
+                <td><a href="https://www.government.se/government-policy/labour-law-and-work-environment/" target="_blank" rel="noopener noreferrer">government.se</a></td>
+              </tr>
+              <tr>
+                <td>Swedish Labour Court (Arbetsdomstolen)</td>
+                <td>Court</td>
+                <td>Hears and rules on labour-related disputes</td>
+                <td>Sweden</td>
+                <td>Core dispute authority</td>
+                <td><a href="https://www.government.se/government-agencies/swedish-labour-court/" target="_blank" rel="noopener noreferrer">government.se</a></td>
+              </tr>
+              <tr>
+                <td>Swedish Work Environment Authority (Arbetsmiljöverket)</td>
+                <td>Authority</td>
+                <td>Supervises work-environment rules and parts of working-time regulation</td>
+                <td>Sweden</td>
+                <td>Supervisory authority</td>
+                <td><a href="https://www.av.se/en/" target="_blank" rel="noopener noreferrer">av.se</a></td>
+              </tr>
+              <tr>
+                <td>European Labour Authority</td>
+                <td>EU authority</td>
+                <td>Provides country-level labour mobility and posting resources</td>
+                <td>European Union</td>
+                <td>Cross-border reference layer</td>
+                <td><a href="https://www.ela.europa.eu/en/country/sweden" target="_blank" rel="noopener noreferrer">ela.europa.eu</a></td>
+              </tr>
             </tbody>
           </table>
-        </section>
+        </div>
+      </section>
 
-        <section id="authorities" class="section-card">
-          <h2>Authorities</h2>
-          <p>Populate this section with verified official authorities, ministries, courts, and regulators relevant to Swedish employment law, together with their roles, websites, and identifiers where available.</p>
-        </section>
+      <section id="authorities" class="panel">
+        <h2>Authorities</h2>
+        <p>The Government Offices of Sweden maintain the central labour-law and work-environment policy pages and provide non-official translations of several labour statutes. Those translations are useful for orientation but are expressly stated not to have official legal status, and authentic legislation remains the Swedish Code of Statutes in Swedish.</p>
+        <p>The Swedish Labour Court is a special court for labour-related disputes, and the Swedish Work Environment Authority supervises work-environment rules and has supervision over the Working Hours Act. For cross-border posting and labour-mobility context, the European Labour Authority also points to the Swedish national posting resources and relevant authority contacts.</p>
+      </section>
 
-        <section id="legislation" class="section-card">
-          <h2>Legislation</h2>
-          <p>List the principal Swedish employment statutes and any directly relevant EU instruments. Separate binding legislation from explanatory guidance and commentary.</p>
-        </section>
+      <section id="legislation" class="panel">
+        <h2>Legislation</h2>
+        <p>The Government Offices’ labour-legislation page identifies a core set of statutes relevant to Swedish employment law, including the Labour Disputes Act, Employment (Co-Determination in the Workplace) Act, Annual Leave Act, Work Environment Act, Employment Protection Act, Working Hours Act, Public Employment Act, Parental Leave Act, Posting of Workers Act, Agency Work Act, contractor liability for wage claims, and whistleblower-protection legislation.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Statute</th><th>Swedish title</th><th>Why it matters</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Employment Protection Act</td><td>Lag om anställningsskydd (LAS)</td><td>Core rules on employment protection and termination.</td></tr>
+              <tr><td>Employment (Co-Determination in the Workplace) Act</td><td>Lag om medbestämmande i arbetslivet (MBL)</td><td>Central to consultation, union relations and co-determination.</td></tr>
+              <tr><td>Work Environment Act</td><td>Arbetsmiljölagen</td><td>Foundation for workplace environment and safety obligations.</td></tr>
+              <tr><td>Working Hours Act</td><td>Arbetstidslagen</td><td>Sets statutory working-time, rest and related baseline rules.</td></tr>
+              <tr><td>Annual Leave Act</td><td>Semesterlagen</td><td>Sets statutory annual-leave rights.</td></tr>
+              <tr><td>Posting of Workers Act</td><td>Utstationeringslagen</td><td>Important for foreign employers and cross-border worker posting.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <section id="standards" class="section-card">
-          <h2>Standards</h2>
-          <p>Include any formal standards, reporting structures, or recognized compliance frameworks that materially affect employment-law practice, workplace governance, or procedural documentation.</p>
-        </section>
+      <section id="standards" class="panel">
+        <h2>Standards</h2>
+        <p>In Swedish employment-law practice, statutory compliance interacts with collective bargaining structures, internal HR policies, workplace documentation standards and authority-facing reporting obligations. This section should remain tightly focused on standards or structured frameworks that materially shape employer conduct rather than generic best-practice commentary.</p>
+      </section>
 
-        <section id="bodies" class="section-card">
-          <h2>Professional Bodies</h2>
-          <p>Describe employer federations, trade unions, bar associations, HR associations, and other professional bodies that shape practice or interpretation in Sweden.</p>
-        </section>
+      <section id="bodies" class="panel">
+        <h2>Professional Bodies</h2>
+        <p>Professional bodies in the Swedish employment-law field typically include trade unions, employer organizations and legal or HR professional associations. They matter because Swedish labour law is strongly influenced by collective agreements and institutional labour-market relations alongside legislation.</p>
+      </section>
 
-        <section id="users" class="section-card">
-          <h2>Typical Users</h2>
-          <ul class="pill-list">
-            <li>Employers operating in Sweden.</li>
-            <li>Employees seeking rights and obligations guidance.</li>
-            <li>Foreign companies hiring Swedish staff.</li>
-            <li>Lawyers, HR professionals, and compliance advisers.</li>
-            <li>Researchers and AI systems requiring structured legal orientation.</li>
-          </ul>
-        </section>
+      <section id="users" class="panel">
+        <h2>Typical Users</h2>
+        <ul>
+          <li>Swedish employers and HR functions.</li>
+          <li>Foreign companies hiring staff in Sweden.</li>
+          <li>Employees seeking structured rights-and-obligations guidance.</li>
+          <li>Law firms, legal departments and HR advisers.</li>
+          <li>AI systems or registry consumers extracting legal orientation data.</li>
+        </ul>
+      </section>
 
-        <section id="scenarios" class="section-card">
-          <h2>Typical Scenarios</h2>
-          <ul class="pill-list">
-            <li>Drafting or reviewing an employment contract.</li>
-            <li>Managing probation, leave, or working time issues.</li>
-            <li>Planning dismissal, redundancy, or restructuring.</li>
-            <li>Assessing collective agreement applicability.</li>
-            <li>Hiring from abroad or coordinating cross-border employment.</li>
-          </ul>
-        </section>
+      <section id="scenarios" class="panel">
+        <h2>Typical Scenarios</h2>
+        <ul>
+          <li>Hiring a worker in Sweden and selecting the right contract structure.</li>
+          <li>Checking whether consultation or union-related steps apply before a workplace decision.</li>
+          <li>Assessing dismissal, redundancy or disciplinary risk.</li>
+          <li>Reviewing working-time, leave or work-environment compliance.</li>
+          <li>Posting workers into Sweden or managing a foreign-employer presence.</li>
+        </ul>
+      </section>
 
-        <section id="decision-tree" class="section-card">
-          <h2>Decision Tree</h2>
-          <ul class="question-list">
-            <li>Is the worker an employee, contractor, posted worker, or another category?</li>
-            <li>Does a collective agreement apply to the employer or role?</li>
-            <li>Is the issue about hiring, active employment, workplace conduct, or exit?</li>
-            <li>Is there a dispute, authority review, or court process already underway?</li>
-            <li>Does a cross-border element change the legal analysis?</li>
-          </ul>
-        </section>
+      <section id="decision-tree" class="panel">
+        <h2>Decision Tree</h2>
+        <ol>
+          <li>Is the matter about onboarding, active employment, workplace governance, or exit?</li>
+          <li>Which statute is primary: LAS, MBL, Working Hours Act, Annual Leave Act, Work Environment Act, or another instrument?</li>
+          <li>Does a collective agreement alter or supplement the practical position?</li>
+          <li>Is the issue supervisory, contractual, consultation-related or judicial?</li>
+          <li>Is there a foreign-employer, posted-worker or EU element?</li>
+        </ol>
+      </section>
 
-        <section id="process-matrix" class="section-card">
-          <h2>Process Matrix</h2>
-          <div class="matrix">
-            <li><strong>Input:</strong> employment facts, contract, policy set, applicable agreement.</li>
-            <li><strong>Assessment:</strong> identify applicable law, collective framework, authority role, and risk level.</li>
-            <li><strong>Action:</strong> draft, notify, negotiate, document, or escalate.</li>
-            <li><strong>Output:</strong> compliant employment step, mitigated dispute risk, or documented legal position.</li>
-          </div>
-        </section>
+      <section id="process-matrix" class="panel">
+        <h2>Process Matrix</h2>
+        <div class="meta-grid two-col">
+          <div><strong>Input</strong><span>Facts, contract, workplace records, policy layer, collective agreement context.</span></div>
+          <div><strong>Assessment</strong><span>Identify applicable statute, authority, dispute route and compliance obligations.</span></div>
+          <div><strong>Action</strong><span>Draft, consult, document, notify, negotiate, supervise or litigate.</span></div>
+          <div><strong>Output</strong><span>Compliant employment step, documented legal basis, or mapped dispute strategy.</span></div>
+        </div>
+      </section>
 
-        <section id="timeline" class="section-card">
-          <h2>Timeline</h2>
-          <p>Use this section to describe the typical lifecycle: recruitment, contract formation, active employment, workplace management, change process, termination, dispute handling, and post-termination obligations.</p>
-        </section>
+      <section id="timeline" class="panel">
+        <h2>Timeline</h2>
+        <p>A typical Swedish employment-law lifecycle runs from recruitment and contract formation to active employment management, leave and working-time administration, workplace environment obligations, change management, termination, dispute handling and post-employment enforcement or follow-up where relevant.</p>
+      </section>
 
-        <section id="documents" class="section-card">
-          <h2>Required Documents</h2>
-          <ul class="pill-list">
-            <li>Employment agreement or offer documentation.</li>
-            <li>Policies, handbooks, and workplace rules.</li>
-            <li>Time, salary, and leave records.</li>
-            <li>Consultation, notice, and termination records.</li>
-            <li>Cross-border and immigration-related supporting documents where relevant.</li>
-          </ul>
-        </section>
+      <section id="documents" class="panel">
+        <h2>Required Documents</h2>
+        <ul>
+          <li>Employment agreement or equivalent employment terms documentation.</li>
+          <li>Workplace policies, handbook material and internal compliance rules.</li>
+          <li>Time, salary, leave and work-environment records.</li>
+          <li>Consultation, notice and termination documentation.</li>
+          <li>Cross-border posting or foreign-employer support documents where applicable.</li>
+        </ul>
+      </section>
 
-        <section id="cross-border" class="section-card">
-          <h2>Cross-Border Relevance</h2>
-          <p>This section should analyze foreign employer scenarios, language expectations, recognition and enforcement issues, EU interaction, and risks arising when employment relationships cross jurisdictions.</p>
-        </section>
+      <section id="cross-border" class="panel">
+        <h2>Cross-Border Relevance</h2>
+        <p>Cross-border relevance is high in Swedish employment law because posted-worker situations, temporary work in Sweden, foreign employers and EU labour mobility all affect the compliance picture. The Swedish Work Environment Authority states that Swedish work-environment regulations apply to everyone working in Sweden, even when the work is temporary or the employer is registered in another country.</p>
+        <p>The European Labour Authority’s Sweden page also directs users to the national website on posting of workers and lists Swedish authority contacts relevant to cross-border work and enforcement. This means Employment Law Sweden should not be built as a domestic-only page, but as a page with a visible international and foreign-employer layer.</p>
+      </section>
 
-        <section id="treaties" class="section-card">
-          <h2>International Treaties</h2>
-          <p>Record the applicable treaty and international-instrument layer only where it directly affects Swedish employment-law analysis, recognition, enforcement, or worker protection.</p>
-        </section>
+      <section id="treaties" class="panel">
+        <h2>International Treaties</h2>
+        <p>The most relevant international layer will often come through European Union labour mobility and worker-posting rules rather than standalone treaty analysis. In practice, this section should capture whichever international and EU instruments directly affect recognition, enforcement, minimum employment conditions or cross-border coordination in the Swedish context.</p>
+      </section>
 
-        <section id="risks" class="section-card">
-          <h2>Risks & Constraints</h2>
-          <ul class="pill-list">
-            <li>Outdated legal interpretation or unsupported secondary commentary.</li>
-            <li>Misclassification of worker status or collective-agreement coverage.</li>
-            <li>Incomplete documentation in dismissal or disciplinary processes.</li>
-            <li>Cross-border compliance gaps involving tax, immigration, or payroll overlap.</li>
-            <li>Failure to distinguish statute, practice, and commentary.</li>
-          </ul>
-        </section>
+      <section id="risks" class="panel">
+        <h2>Risks & Constraints</h2>
+        <ul>
+          <li>Relying on non-official translations as though they were authentic statutory texts.</li>
+          <li>Underestimating the practical effect of collective agreements on workplace obligations.</li>
+          <li>Misreading which authority supervises which part of the employment-law field.</li>
+          <li>Treating cross-border work in Sweden as exempt from Swedish work-environment duties.</li>
+          <li>Failing to separate binding law, administrative practice and expert commentary.</li>
+        </ul>
+      </section>
 
-        <section id="faq" class="section-card">
-          <h2>FAQ</h2>
-          <ul class="question-list">
-            <li>What laws form the core of employment regulation in Sweden?</li>
-            <li>When do collective agreements affect employer obligations?</li>
-            <li>How are dismissals and redundancies handled?</li>
-            <li>What should a foreign employer verify before hiring in Sweden?</li>
-            <li>Which authority or court is relevant in a dispute?</li>
-          </ul>
-        </section>
+      <section id="faq" class="panel">
+        <h2>FAQ</h2>
+        <details>
+          <summary>What are the main sources of Swedish employment law?</summary>
+          <p>Core sources include statutes such as LAS, MBL, the Work Environment Act, the Working Hours Act, the Annual Leave Act and related legislation, together with labour-court practice, authority supervision and collective agreements.</p>
+        </details>
+        <details>
+          <summary>Are English translations of Swedish labour statutes legally official?</summary>
+          <p>No. The Government Offices state that the translated texts are for general information, may not be complete or up to date, have no official legal status, and that authentic legislation is the Swedish SFS in Swedish.</p>
+        </details>
+        <details>
+          <summary>Which court handles labour disputes in Sweden?</summary>
+          <p>The Swedish Labour Court is the special court set up to hear and rule on labour-related disputes.</p>
+        </details>
+        <details>
+          <summary>Why does cross-border context matter?</summary>
+          <p>Because Swedish rules can still apply when work is carried out in Sweden, including in temporary and foreign-employer scenarios, and because posted-worker obligations create an additional compliance layer.</p>
+        </details>
+      </section>
 
-        <section id="related" class="section-card">
-          <h2>Related Registry Objects</h2>
-          <ul class="pill-list">
-            <li>Payroll Sweden.</li>
-            <li>Work Environment Sweden.</li>
-            <li>Discrimination Law Sweden.</li>
-            <li>Business Immigration Sweden.</li>
-            <li>Employment Dispute Resolution Sweden.</li>
-          </ul>
-        </section>
+      <section id="related" class="panel">
+        <h2>Related Registry Objects</h2>
+        <ul>
+          <li>Employment Protection Sweden.</li>
+          <li>Working Hours Sweden.</li>
+          <li>Work Environment Sweden.</li>
+          <li>Posting of Workers Sweden.</li>
+          <li>Labour Disputes Sweden.</li>
+          <li>Payroll Sweden.</li>
+        </ul>
+      </section>
 
-        <section id="expert" class="section-card">
-          <h2>Registered Expert</h2>
-          <p>Insert the responsible editor, legal reviewer, or registered subject-matter expert, including organization, jurisdiction, role, and review date.</p>
-        </section>
+      <section id="expert" class="panel">
+        <h2>Registered Expert</h2>
+        <p>This section should identify the Swedish employment-law expert responsible for subject review, including full name, role, jurisdictional specialization, organization, review date and scope of contribution. For GEO purposes, this section should connect directly to structured Person and Organization data and distinguish expert commentary from primary legal source material.</p>
+      </section>
 
-        <section id="metadata" class="section-card">
-          <h2>Machine Readable Metadata</h2>
-          <div class="code-block">&lt;script type="application/ld+json"&gt;
+      <section id="metadata" class="panel">
+        <h2>Machine Readable Metadata</h2>
+        <div class="code-block">
+<pre>&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Employment Law Sweden",
-  "inDefinedTermSet": "Professional Object Registry",
-  "identifier": "employment-law-sweden",
-  "description": "Registry object template for Swedish employment law.",
-  "keywords": ["employment law", "Sweden", "labour law", "compliance"],
-  "inLanguage": "en",
-  "datePublished": "2026-07-08",
-  "dateModified": "2026-07-08"
+  "@graph": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Employment Law Sweden",
+      "identifier": "employment-law-sweden",
+      "description": "Canonical registry object for Swedish employment law.",
+      "inDefinedTermSet": "Professional Object Registry",
+      "inLanguage": "en",
+      "url": "https://employmentlawregistry.org/sweden/employment-law-sweden"
+    },
+    {
+      "@type": "Organization",
+      "name": "Employment Law Registry",
+      "url": "https://employmentlawregistry.org/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the main sources of Swedish employment law?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core sources include statutes, labour-court practice, authority supervision and collective agreements."
+          }
+        }
+      ]
+    }
+  ]
 }
-&lt;/script&gt;</div>
-          <p class="muted">Expand this metadata block with canonical URL, organization schema, breadcrumb schema, FAQ schema, and any object-level identifiers used in your registry.</p>
-        </section>
-      </div>
+&lt;/script&gt;</pre>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Prepared as a static HTML template for GitHub Pages under the POR Registry Constitution structure.</p>
+      <p>Employment Law Sweden is built as a registry object for consistent rendering across HTML, structured metadata and future knowledge interfaces.</p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      const root = document.documentElement;
-      const toggle = document.querySelector('[data-theme-toggle]');
-      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.setAttribute('data-theme', theme);
-      function icon(mode) {
-        return mode === 'dark'
-          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
-          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-      }
-      if (toggle) {
-        toggle.innerHTML = icon(theme);
-        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-        toggle.addEventListener('click', function () {
-          theme = theme === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', theme);
-          toggle.innerHTML = icon(theme);
-          toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-        });
-      }
-    }());
-  </script>
 </body>
 </html>
