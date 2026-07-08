@@ -1,182 +1,485 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ===========================
-POR REGISTRY MASTER TEMPLATE v1.0
-Universal Cross-Border Registry
-Replace all {{VARIABLES}}
-=========================== -->
-
-<title>{{DOMAIN}} {{JURISDICTION}} | {{REGISTRY_NAME}}</title>
-
-<meta name="description" content="{{META_DESCRIPTION}}">
-<meta name="robots" content="index,follow">
-
-<link rel="canonical" href="{{CANONICAL_URL}}">
-<link rel="alternate" hreflang="en" href="{{CANONICAL_URL}}">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{OG_TITLE}}">
-<meta property="og:description" content="{{OG_DESCRIPTION}}">
-<meta property="og:url" content="{{CANONICAL_URL}}">
-<meta property="og:site_name" content="{{REGISTRY_NAME}}">
-
-<!-- JSON-LD PLACEHOLDER -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@graph":[
-   {"@type":"WebSite","name":"{{REGISTRY_NAME}}","url":"{{ROOT_URL}}"},
-   {"@type":"WebPage",
-    "name":"{{TITLE}}",
-    "url":"{{CANONICAL_URL}}",
-    "description":"{{META_DESCRIPTION}}",
-    "inLanguage":"en"},
-   {"@type":"ProfessionalService",
-    "name":"{{DOMAIN}}",
-    "areaServed":"{{COUNTRY}}"}
- ]
-}
-</script>
-
-<link rel="stylesheet" href="/css/registry.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employment Law Sweden | POR Registry Object</title>
+  <meta name="description" content="GitHub Pages-ready HTML registry object template for Employment Law Sweden, structured under the POR Registry Constitution.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://example.github.io/employment-law-sweden/">
+  <meta property="og:title" content="Employment Law Sweden | POR Registry Object">
+  <meta property="og:description" content="Structured registry object for Employment Law Sweden based on the POR Registry Constitution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.github.io/employment-law-sweden/">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+      --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
+      --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #fbfbf9;
+      --color-surface-offset: #f3f0ec; --color-border: #d4d1ca; --color-divider: #dcd9d5;
+      --color-text: #28251d; --color-text-muted: #6f6d67; --color-text-faint: #9f9c95;
+      --color-text-inverse: #f9f8f4; --color-primary: #01696f; --color-primary-hover: #0c4e54;
+      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06); --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
+      --content-default: 960px; --content-wide: 1200px;
+      --font-display: 'Boska', Georgia, serif; --font-body: 'Satoshi', Inter, sans-serif;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d;
+      --color-surface-offset: #1d1c1a; --color-border: #393836; --color-divider: #262523;
+      --color-text: #cdccca; --color-text-muted: #989792; --color-text-faint: #6c6a66;
+      --color-text-inverse: #2b2a28; --color-primary: #4f98a3; --color-primary-hover: #227f8b;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2); --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100dvh; line-height: 1.6; font-family: var(--font-body); font-size: var(--text-base);
+      color: var(--color-text); background: var(--color-bg);
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: 0; background: none; color: inherit; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    .skip-link { position: absolute; left: var(--space-4); top: -3rem; background: var(--color-primary); color: var(--color-text-inverse); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full, 999px); z-index: 20; }
+    .skip-link:focus { top: var(--space-4); }
+    .site-header {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
+      background: color-mix(in oklab, var(--color-bg) 82%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
+    }
+    .header-inner, .container { width: min(calc(100% - 2rem), var(--content-wide)); margin: 0 auto; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: var(--space-3); font-weight: 700; }
+    .brand-mark { width: 2.1rem; height: 2.1rem; color: var(--color-primary); }
+    .brand-meta small { display: block; color: var(--color-text-muted); font-size: var(--text-xs); letter-spacing: 0.06em; text-transform: uppercase; }
+    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
+    .theme-toggle, .nav-link {
+      min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-full, 999px); transition: background var(--transition-interactive), color var(--transition-interactive);
+    }
+    .theme-toggle:hover, .nav-link:hover { background: var(--color-surface-offset); }
+    .hero { padding: clamp(var(--space-12), 8vw, var(--space-20)) 0 var(--space-10); }
+    .eyebrow { color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.12em; font-size: var(--text-xs); font-weight: 700; }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; }
+    h1 { font-size: var(--text-2xl); max-width: 12ch; margin-top: var(--space-4); }
+    h2 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+    h3 { font-size: var(--text-lg); }
+    p { max-width: 72ch; }
+    .hero-grid { display: grid; gap: var(--space-8); align-items: start; }
+    .hero-card, .section-card, .toc, .meta-grid article {
+      background: var(--color-surface); border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-xl); box-shadow: var(--shadow-sm);
+    }
+    .hero-card { padding: var(--space-6); }
+    .hero-card p + p { margin-top: var(--space-3); }
+    .meta-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-4); margin-top: var(--space-6);
+    }
+    .meta-grid article { padding: var(--space-4); }
+    .meta-grid span { display: block; color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; }
+    .layout { display: grid; gap: var(--space-8); padding-bottom: var(--space-16); }
+    .toc { padding: var(--space-5); align-self: start; }
+    .toc h2 { font-size: var(--text-lg); font-family: var(--font-body); margin-bottom: var(--space-4); }
+    .toc ul { list-style: none; display: grid; gap: var(--space-2); }
+    .toc a { display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); color: var(--color-text-muted); }
+    .toc a:hover { background: var(--color-surface-offset); color: var(--color-text); }
+    main section { scroll-margin-top: 6rem; }
+    .section-card { padding: var(--space-6); margin-bottom: var(--space-6); }
+    .section-card > p + * { margin-top: var(--space-4); }
+    .split { display: grid; gap: var(--space-5); }
+    .pill-list, .question-list { list-style: none; display: grid; gap: var(--space-3); }
+    .pill-list li, .question-list li, .matrix li {
+      padding: var(--space-3) var(--space-4); background: var(--color-surface-2);
+      border: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent); border-radius: var(--radius-lg);
+    }
+    .matrix { display: grid; gap: var(--space-3); }
+    .entity-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .entity-table th, .entity-table td { text-align: left; padding: var(--space-3); border-bottom: 1px solid var(--color-divider); vertical-align: top; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem; background: color-mix(in oklab, var(--color-primary) 12%, var(--color-surface));
+      color: var(--color-primary); border-radius: 999px; padding: 0.4rem 0.8rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .muted { color: var(--color-text-muted); }
+    .code-block {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--text-sm);
+      background: var(--color-surface-offset); border-radius: var(--radius-lg); padding: var(--space-4); overflow-x: auto;
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+    }
+    .site-footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-12); color: var(--color-text-muted); }
+    @media (min-width: 960px) {
+      .hero-grid { grid-template-columns: 1.35fr 0.95fr; }
+      .layout { grid-template-columns: 280px 1fr; align-items: start; }
+      .toc { position: sticky; top: 6rem; }
+      .split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Employment Law Sweden home">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect x="10" y="10" width="44" height="44" rx="12" stroke="currentColor" stroke-width="4"></rect>
+          <path d="M22 41V23h10.5c6 0 9.5 3.2 9.5 8.3S38.5 41 32.5 41H22Z" stroke="currentColor" stroke-width="4"></path>
+          <path d="M28 29h7" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+        </svg>
+        <div class="brand-meta">
+          Employment Law Sweden
+          <small>POR Registry Object</small>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a class="nav-link" href="#identity">Start</a>
+        <a class="nav-link" href="#metadata">Metadata</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<header>
+  <main id="content">
+    <section class="hero container" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Sweden · Labour & employment</p>
+          <h1>Employment Law Sweden rendered as a POR-ready GitHub Pages document.</h1>
+          <p class="muted" style="margin-top: var(--space-4);">This page is a structured HTML foundation built from the uploaded POR Constitution. It follows the mandatory registry-object order and is ready to be filled with verified Swedish employment-law content from official sources.</p>
+          <div class="meta-grid">
+            <article><span>Classification</span> Registry Object</article>
+            <article><span>Domain</span> Employment Law</article>
+            <article><span>Jurisdiction</span> Sweden</article>
+            <article><span>Status</span> Draft template</article>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <span class="badge">GitHub Pages ready</span>
+          <p><strong>Use:</strong> publish as a static page in a GitHub Pages repository, or adapt the section content into JSON-LD, markdown, PDF, and API outputs.</p>
+          <p><strong>Important:</strong> the POR Constitution states that HTML is presentation only, while the same registry object should render consistently across HTML, PDF, Markdown, JSON, JSON-LD, XML, API, and LLM feeds.</p>
+          <p><strong>Next step:</strong> replace placeholder text with verified Swedish authorities, legislation, standards, and cross-border analysis.</p>
+        </aside>
+      </div>
+    </section>
 
-<nav>
-Home →
-{{DOMAIN}} →
-{{COUNTRY}}
-</nav>
+    <div class="container layout">
+      <nav class="toc" aria-label="Table of contents">
+        <h2>Sections</h2>
+        <ul>
+          <li><a href="#identity">1. Identity</a></li>
+          <li><a href="#executive-summary">2. Executive Summary</a></li>
+          <li><a href="#object-definition">3. Object Definition</a></li>
+          <li><a href="#purpose">4. Purpose</a></li>
+          <li><a href="#primary-outcome">5. Primary Outcome</a></li>
+          <li><a href="#scope">6. Scope</a></li>
+          <li><a href="#object-dna">7. Object DNA</a></li>
+          <li><a href="#ai-summary">8. AI Retrieval Summary</a></li>
+          <li><a href="#knowledge-graph">9. Knowledge Graph</a></li>
+          <li><a href="#entity-index">10. Entity Index</a></li>
+          <li><a href="#authorities">11. Authorities</a></li>
+          <li><a href="#legislation">12. Legislation</a></li>
+          <li><a href="#standards">13. Standards</a></li>
+          <li><a href="#bodies">14. Professional Bodies</a></li>
+          <li><a href="#users">15. Typical Users</a></li>
+          <li><a href="#scenarios">16. Typical Scenarios</a></li>
+          <li><a href="#decision-tree">17. Decision Tree</a></li>
+          <li><a href="#process-matrix">18. Process Matrix</a></li>
+          <li><a href="#timeline">19. Timeline</a></li>
+          <li><a href="#documents">20. Required Documents</a></li>
+          <li><a href="#cross-border">21. Cross-Border Relevance</a></li>
+          <li><a href="#treaties">22. International Treaties</a></li>
+          <li><a href="#risks">23. Risks & Constraints</a></li>
+          <li><a href="#faq">24. FAQ</a></li>
+          <li><a href="#related">25. Related Registry Objects</a></li>
+          <li><a href="#expert">26. Registered Expert</a></li>
+          <li><a href="#metadata">27. Machine Readable Metadata</a></li>
+        </ul>
+      </nav>
 
-<pre>
-REGISTRY.......................{{REGISTRY_NAME}}
-OBJECT ID......................{{OBJECT_ID}}
-OBJECT TYPE....................{{OBJECT_TYPE}}
-STATUS.........................ACTIVE
-DOMAIN.........................{{DOMAIN}}
-SUBDOMAIN......................{{SUBDOMAIN}}
-SPECIALIZATION.................{{SPECIALIZATION}}
-JURISDICTION...................{{COUNTRY}}
-CHECKSUM.......................{{CHECKSUM}}
-</pre>
+      <div>
+        <section id="identity" class="section-card">
+          <h2>Identity</h2>
+          <div class="split">
+            <div class="code-block">Registry Name: Professional Object Registry\nRegistry ID: POR\nObject ID: employment-law-sweden\nVersion: 1.0.0\nStatus: Draft\nClassification: Registry Object\nDomain: Employment Law\nSubdomain: Labour & Workplace Regulation\nSpecialization: Swedish Employment Law\nJurisdiction: National\nCountry: Sweden\nLanguage: English\nPublication Date: 2026-07-08\nLast Updated: 2026-07-08\nRecord Integrity: Pending validation\nChecksum: To be generated</div>
+            <div>
+              <p>This identity block reflects the mandatory object identity fields required by the Constitution.</p>
+              <p class="muted">Replace version, dates, checksum, and integrity values during your publication workflow.</p>
+            </div>
+          </div>
+        </section>
 
-<h1>{{DOMAIN}}</h1>
+        <section id="executive-summary" class="section-card">
+          <h2>Executive Summary</h2>
+          <p>Employment Law Sweden is a structured knowledge object covering the principal legal framework, institutional actors, obligations, procedures, and cross-border considerations governing employment relationships in Sweden. The final published version should distinguish primary law, administrative practice, collective bargaining context, and professional commentary.</p>
+        </section>
 
-<h2>{{COUNTRY}} — CROSS-BORDER CONTEXT</h2>
+        <section id="object-definition" class="section-card">
+          <h2>Object Definition</h2>
+          <p>This object defines the Swedish employment-law domain as a jurisdiction-aware registry asset rather than a conventional web page. It is designed to support human readers, machines, and AI retrieval while preserving consistent content across multiple output formats.</p>
+        </section>
 
-</header>
+        <section id="purpose" class="section-card">
+          <h2>Purpose</h2>
+          <p>The purpose of this registry object is to provide a neutral, evidence-based, and updateable structure for describing employment law in Sweden for employers, workers, legal professionals, foreign businesses, and downstream systems.</p>
+        </section>
 
-<section>
-<h2>OBJECT POSITION</h2>
-<pre>
-Business
-  Operations
-    {{DOMAIN}}
-      {{SUBDOMAIN}}
-        {{SPECIALIZATION}}
-          {{COUNTRY}}
-</pre>
-</section>
+        <section id="primary-outcome" class="section-card">
+          <h2>Primary Outcome</h2>
+          <p>The primary outcome is a reliable canonical reference that can be rendered consistently in GitHub Pages HTML and reused across machine-readable and AI-readable channels.</p>
+        </section>
 
-<main>
+        <section id="scope" class="section-card">
+          <h2>Scope</h2>
+          <ul class="pill-list">
+            <li>Employment contracts, onboarding, and probation rules.</li>
+            <li>Working time, leave, salary structures, and workplace obligations.</li>
+            <li>Termination, redundancy, disputes, and enforcement pathways.</li>
+            <li>Collective agreements, union context, and employer compliance duties.</li>
+            <li>Cross-border hiring and foreign-employer scenarios affecting Sweden.</li>
+          </ul>
+        </section>
 
-<section><h2>OBJECT DEFINITION</h2>{{OBJECT_DEFINITION}}</section>
+        <section id="object-dna" class="section-card">
+          <h2>Object DNA</h2>
+          <div class="split">
+            <ul class="pill-list">
+              <li>Industry: Legal and regulatory information.</li>
+              <li>Domain: Employment law.</li>
+              <li>Function: Compliance, guidance, legal orientation.</li>
+              <li>Actors: Employees, employers, authorities, unions, courts, advisers.</li>
+              <li>Country: Sweden.</li>
+            </ul>
+            <ul class="pill-list">
+              <li>Cross-border status: Relevant by default.</li>
+              <li>Licensing: None inherent to the object; source-dependent.</li>
+              <li>Digital maturity: Structured, semantic, reusable.</li>
+              <li>Risk profile: Medium to high, depending on dispute or compliance failure.</li>
+              <li>Related objects: Payroll, work environment, immigration, dispute resolution.</li>
+            </ul>
+          </div>
+        </section>
 
-<section><h2>EXECUTIVE SUMMARY</h2>{{EXECUTIVE_SUMMARY}}</section>
+        <section id="ai-summary" class="section-card">
+          <h2>AI Retrieval Summary</h2>
+          <p>Employment Law Sweden is the canonical registry object for Swedish labour and employment law. It should summarize the main legal sources, relevant public authorities, professional actors, key employer and employee obligations, cross-border issues, and document requirements. Retrieval terms should cover employment contracts, dismissal, redundancy, working time, leave, collective agreements, labour disputes, and Swedish workplace compliance.</p>
+          <div class="code-block">Synonyms: Swedish employment law; Sweden labour law; workplace law Sweden; employer compliance Sweden\nRetrieval keywords: contracts, dismissal, redundancy, working time, leave, collective agreements, labour court, work environment, discrimination, payroll, foreign employer Sweden\nSearch intent map: learn law; check compliance; resolve dispute; hire in Sweden; compare cross-border obligations</div>
+        </section>
 
-<section><h2>PRIMARY OUTCOME</h2>{{PRIMARY_OUTCOME}}</section>
+        <section id="knowledge-graph" class="section-card">
+          <h2>Knowledge Graph</h2>
+          <ul class="pill-list">
+            <li>Parent Object: Labour Law Europe.</li>
+            <li>Child Objects: Employment Contracts Sweden, Dismissal Sweden, Working Time Sweden.</li>
+            <li>Peer Objects: Payroll Sweden, Work Environment Sweden, Discrimination Law Sweden.</li>
+            <li>Dependencies: Swedish statutes, collective agreements, official guidance, court decisions.</li>
+            <li>Related Jurisdictions: EU, Nordic countries, foreign employer home jurisdiction.</li>
+          </ul>
+        </section>
 
-<section><h2>REQUEST CONTEXTS</h2>{{REQUEST_CONTEXTS}}</section>
+        <section id="entity-index" class="section-card">
+          <h2>Entity Index</h2>
+          <table class="entity-table">
+            <thead>
+              <tr><th>Name</th><th>Type</th><th>Role</th><th>Jurisdiction</th><th>Relationship</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Swedish Work Environment Authority</td><td>Authority</td><td>Workplace oversight</td><td>Sweden</td><td>Supervisory relevance</td></tr>
+              <tr><td>Swedish Labour Court</td><td>Court</td><td>Employment dispute resolution</td><td>Sweden</td><td>Adjudicative relevance</td></tr>
+              <tr><td>Employer organizations</td><td>Professional body</td><td>Collective bargaining and guidance</td><td>Sweden</td><td>Professional ecosystem</td></tr>
+              <tr><td>Trade unions</td><td>Professional body</td><td>Worker representation</td><td>Sweden</td><td>Collective framework</td></tr>
+            </tbody>
+          </table>
+        </section>
 
-<section><h2>TYPICAL SCENARIO</h2>{{TYPICAL_SCENARIO}}</section>
+        <section id="authorities" class="section-card">
+          <h2>Authorities</h2>
+          <p>Populate this section with verified official authorities, ministries, courts, and regulators relevant to Swedish employment law, together with their roles, websites, and identifiers where available.</p>
+        </section>
 
-<section><h2>NOT SUITABLE WHEN</h2>{{EXCLUSIONS}}</section>
+        <section id="legislation" class="section-card">
+          <h2>Legislation</h2>
+          <p>List the principal Swedish employment statutes and any directly relevant EU instruments. Separate binding legislation from explanatory guidance and commentary.</p>
+        </section>
 
-<section><h2>COUNTRY CHARACTERISTICS</h2>{{COUNTRY_CHARACTERISTICS}}</section>
+        <section id="standards" class="section-card">
+          <h2>Standards</h2>
+          <p>Include any formal standards, reporting structures, or recognized compliance frameworks that materially affect employment-law practice, workplace governance, or procedural documentation.</p>
+        </section>
 
-<section><h2>KEY AUTHORITIES</h2>{{KEY_AUTHORITIES}}</section>
+        <section id="bodies" class="section-card">
+          <h2>Professional Bodies</h2>
+          <p>Describe employer federations, trade unions, bar associations, HR associations, and other professional bodies that shape practice or interpretation in Sweden.</p>
+        </section>
 
-<section><h2>TYPICAL TIMELINE</h2>{{TIMELINE}}</section>
+        <section id="users" class="section-card">
+          <h2>Typical Users</h2>
+          <ul class="pill-list">
+            <li>Employers operating in Sweden.</li>
+            <li>Employees seeking rights and obligations guidance.</li>
+            <li>Foreign companies hiring Swedish staff.</li>
+            <li>Lawyers, HR professionals, and compliance advisers.</li>
+            <li>Researchers and AI systems requiring structured legal orientation.</li>
+          </ul>
+        </section>
 
-<section><h2>TYPICAL TIMEFRAMES</h2>{{TIMEFRAMES}}</section>
+        <section id="scenarios" class="section-card">
+          <h2>Typical Scenarios</h2>
+          <ul class="pill-list">
+            <li>Drafting or reviewing an employment contract.</li>
+            <li>Managing probation, leave, or working time issues.</li>
+            <li>Planning dismissal, redundancy, or restructuring.</li>
+            <li>Assessing collective agreement applicability.</li>
+            <li>Hiring from abroad or coordinating cross-border employment.</li>
+          </ul>
+        </section>
 
-<section><h2>CROSS-BORDER RELEVANCE</h2>{{CROSS_BORDER}}</section>
+        <section id="decision-tree" class="section-card">
+          <h2>Decision Tree</h2>
+          <ul class="question-list">
+            <li>Is the worker an employee, contractor, posted worker, or another category?</li>
+            <li>Does a collective agreement apply to the employer or role?</li>
+            <li>Is the issue about hiring, active employment, workplace conduct, or exit?</li>
+            <li>Is there a dispute, authority review, or court process already underway?</li>
+            <li>Does a cross-border element change the legal analysis?</li>
+          </ul>
+        </section>
 
-<section><h2>OPERATING CONSTRAINTS</h2>{{OPERATING_CONSTRAINTS}}</section>
+        <section id="process-matrix" class="section-card">
+          <h2>Process Matrix</h2>
+          <div class="matrix">
+            <li><strong>Input:</strong> employment facts, contract, policy set, applicable agreement.</li>
+            <li><strong>Assessment:</strong> identify applicable law, collective framework, authority role, and risk level.</li>
+            <li><strong>Action:</strong> draft, notify, negotiate, document, or escalate.</li>
+            <li><strong>Output:</strong> compliant employment step, mitigated dispute risk, or documented legal position.</li>
+          </div>
+        </section>
 
-<section><h2>PURPOSE</h2>{{PURPOSE}}</section>
+        <section id="timeline" class="section-card">
+          <h2>Timeline</h2>
+          <p>Use this section to describe the typical lifecycle: recruitment, contract formation, active employment, workplace management, change process, termination, dispute handling, and post-termination obligations.</p>
+        </section>
 
-<section><h2>CORE COMPETENCE</h2>{{CORE_COMPETENCE}}</section>
+        <section id="documents" class="section-card">
+          <h2>Required Documents</h2>
+          <ul class="pill-list">
+            <li>Employment agreement or offer documentation.</li>
+            <li>Policies, handbooks, and workplace rules.</li>
+            <li>Time, salary, and leave records.</li>
+            <li>Consultation, notice, and termination records.</li>
+            <li>Cross-border and immigration-related supporting documents where relevant.</li>
+          </ul>
+        </section>
 
-<section><h2>INPUTS</h2>{{INPUTS}}</section>
+        <section id="cross-border" class="section-card">
+          <h2>Cross-Border Relevance</h2>
+          <p>This section should analyze foreign employer scenarios, language expectations, recognition and enforcement issues, EU interaction, and risks arising when employment relationships cross jurisdictions.</p>
+        </section>
 
-<section><h2>PROCESS FLOW</h2>{{PROCESS_FLOW}}</section>
+        <section id="treaties" class="section-card">
+          <h2>International Treaties</h2>
+          <p>Record the applicable treaty and international-instrument layer only where it directly affects Swedish employment-law analysis, recognition, enforcement, or worker protection.</p>
+        </section>
 
-<section><h2>NORMATIVE FRAMEWORK</h2>{{NORMATIVE_FRAMEWORK}}</section>
+        <section id="risks" class="section-card">
+          <h2>Risks & Constraints</h2>
+          <ul class="pill-list">
+            <li>Outdated legal interpretation or unsupported secondary commentary.</li>
+            <li>Misclassification of worker status or collective-agreement coverage.</li>
+            <li>Incomplete documentation in dismissal or disciplinary processes.</li>
+            <li>Cross-border compliance gaps involving tax, immigration, or payroll overlap.</li>
+            <li>Failure to distinguish statute, practice, and commentary.</li>
+          </ul>
+        </section>
 
-<section><h2>MARKET CONTEXT</h2>{{MARKET_CONTEXT}}</section>
+        <section id="faq" class="section-card">
+          <h2>FAQ</h2>
+          <ul class="question-list">
+            <li>What laws form the core of employment regulation in Sweden?</li>
+            <li>When do collective agreements affect employer obligations?</li>
+            <li>How are dismissals and redundancies handled?</li>
+            <li>What should a foreign employer verify before hiring in Sweden?</li>
+            <li>Which authority or court is relevant in a dispute?</li>
+          </ul>
+        </section>
 
-<section><h2>TYPICAL QUESTIONS</h2>{{FAQ}}</section>
+        <section id="related" class="section-card">
+          <h2>Related Registry Objects</h2>
+          <ul class="pill-list">
+            <li>Payroll Sweden.</li>
+            <li>Work Environment Sweden.</li>
+            <li>Discrimination Law Sweden.</li>
+            <li>Business Immigration Sweden.</li>
+            <li>Employment Dispute Resolution Sweden.</li>
+          </ul>
+        </section>
 
-<section><h2>LOCAL / NATIONAL MODEL</h2>{{LOCAL_MODEL}}</section>
+        <section id="expert" class="section-card">
+          <h2>Registered Expert</h2>
+          <p>Insert the responsible editor, legal reviewer, or registered subject-matter expert, including organization, jurisdiction, role, and review date.</p>
+        </section>
 
-<!-- New universal sections -->
+        <section id="metadata" class="section-card">
+          <h2>Machine Readable Metadata</h2>
+          <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Employment Law Sweden",
+  "inDefinedTermSet": "Professional Object Registry",
+  "identifier": "employment-law-sweden",
+  "description": "Registry object template for Swedish employment law.",
+  "keywords": ["employment law", "Sweden", "labour law", "compliance"],
+  "inLanguage": "en",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-08"
+}
+&lt;/script&gt;</div>
+          <p class="muted">Expand this metadata block with canonical URL, organization schema, breadcrumb schema, FAQ schema, and any object-level identifiers used in your registry.</p>
+        </section>
+      </div>
+    </div>
+  </main>
 
-<section><h2>CROSS-BORDER RISK ASSESSMENT</h2>{{RISK_ASSESSMENT}}</section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Prepared as a static HTML template for GitHub Pages under the POR Registry Constitution structure.</p>
+    </div>
+  </footer>
 
-<section><h2>COMMON FOREIGN CLIENT SCENARIOS</h2>{{FOREIGN_SCENARIOS}}</section>
-
-<section><h2>INTERNATIONAL TREATIES & REGULATIONS</h2>{{INTERNATIONAL_FRAMEWORK}}</section>
-
-<section><h2>RECOGNITION & ENFORCEMENT MATRIX</h2>{{ENFORCEMENT_MATRIX}}</section>
-
-<section><h2>REQUIRED DOCUMENTS</h2>{{REQUIRED_DOCUMENTS}}</section>
-
-<section><h2>COSTS & FEES</h2>{{COSTS}}</section>
-
-<section><h2>ESTIMATED DURATION</h2>{{DURATION}}</section>
-
-<section><h2>SUCCESS FACTORS</h2>{{SUCCESS_FACTORS}}</section>
-
-<section><h2>COMMON MISTAKES</h2>{{COMMON_MISTAKES}}</section>
-
-<section><h2>DECISION TREE</h2>{{DECISION_TREE}}</section>
-
-<section><h2>RELATED PROFESSIONAL DOMAINS</h2>{{RELATED_DOMAINS}}</section>
-
-<section><h2>COUNTRY COMPARISON</h2>{{COUNTRY_COMPARISON}}</section>
-
-<section><h2>ENTITY RELATIONSHIPS</h2>{{ENTITY_GRAPH}}</section>
-
-<section><h2>AI RETRIEVAL SUMMARY</h2>{{LLM_SUMMARY}}</section>
-
-<section><h2>INTERNAL LINKING MATRIX</h2>{{INTERNAL_LINKS}}</section>
-
-<section><h2>REGISTERED EXPERT</h2>{{REGISTERED_EXPERT}}</section>
-
-</main>
-
-<footer>
-
-<pre>
-END OF RECORD
-
-CLASSIFICATION.......{{CLASSIFICATION}}
-REGISTRY SCOPE.......{{SCOPE}}
-MACHINE ID...........{{MACHINE_ID}}
-RECORD STATUS........VERIFIED
-LAST UPDATED.........{{LAST_UPDATED}}
-
-</pre>
-
-</footer>
-
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      function icon(mode) {
+        return mode === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+      }
+      if (toggle) {
+        toggle.innerHTML = icon(theme);
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        toggle.addEventListener('click', function () {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', theme);
+          toggle.innerHTML = icon(theme);
+          toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        });
+      }
+    }());
+  </script>
 </body>
 </html>
