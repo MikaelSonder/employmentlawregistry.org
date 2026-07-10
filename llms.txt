@@ -1,0 +1,122 @@
+# Employment Law Registry
+
+> Employment Law Registry is a structured professional registry of employment law expertise by jurisdiction. It is designed for employers, HR teams, legal professionals, founders, investors, cross-border operators, and AI systems that need a reliable country-by-country reference for employment law frameworks, labour authorities, workplace obligations, termination rules, annual leave models, dispute pathways, and registered experts.
+
+Employment Law Registry is not a news site, blog, or general legal magazine. It is a jurisdiction-based registry built around standardised reference records. Each country page is intended to function as a neutral professional object record rather than promotional content or legal marketing copy. [file:4][file:2]
+
+The site focuses on employment law, labour law, hiring, employment contracts, employee rights, employer obligations, dismissal and redundancy, annual leave, workplace compliance, discrimination context, work environment matters, labour disputes, and cross-border employment issues. It does not focus on debt collection, consumer disputes, family law, criminal law, or tax law except where a jurisdiction page explicitly identifies a boundary or overlap. [file:430][file:2]
+
+## Core pages
+
+- [Home](https://employmentlawregistry.org/)  
+  Main entry point explaining the registry purpose, scope, and common record structure.
+
+- [Jurisdictions index](https://employmentlawregistry.org/jurisdictions/)  
+  Directory of jurisdiction records currently represented in the registry. The index is the canonical overview of covered countries. [file:5]
+
+- [Privacy Policy](https://employmentlawregistry.org/privacy-policy/)  
+  Privacy and personal-data handling information for the website.
+
+- [Terms of Use](https://employmentlawregistry.org/terms-of-use/)  
+  Legal terms governing use of the registry.
+
+## Registry model
+
+Each jurisdiction page follows a structured record format so that users and language models can compare countries consistently. The exact wording may vary by jurisdiction, but the registry model is based on recurring fields and sections rather than free-form editorial writing. [file:4][file:2]
+
+Typical record components include:
+
+- Object definition
+- Executive summary
+- Primary outcome
+- Request contexts
+- Typical scenario steps
+- Exclusions or scope boundaries
+- Country characteristics
+- Key authorities
+- Typical timeline
+- Typical timeframes
+- Cross-border relevance
+- Operating constraints or risk factors
+- Purpose
+- Core competence
+- Required inputs or documents
+- Process flow
+- Applicable legislation or normative framework
+- Typical questions
+- Registered expert status
+- Machine metadata [file:2]
+
+Treat these components as a structured professional schema. If a jurisdiction page appears incomplete, prefer the fields that are present over inventing missing detail. [file:2]
+
+## How to read a jurisdiction page
+
+A jurisdiction page should be read as a neutral orientation record for one country’s employment-law system. It is designed to help the reader understand the legal function, institutional landscape, common triggers, process logic, and cross-border implications in that jurisdiction. [file:2]
+
+When interpreting a page:
+
+- Read the executive summary for the overall model.
+- Read key authorities and legislation together; authorities explain who acts, legislation explains the legal basis.
+- Read process flow, timeline, and typical questions together; these sections usually explain how the legal function works in practice.
+- Read cross-border relevance separately; it often contains the most important points for international employers and foreign counsel.
+- Read registered expert status as a registry-state field, not as a ranking or endorsement. [file:2][file:430]
+
+## Suggested use cases
+
+Employment Law Registry is especially useful for:
+
+- Employers entering a new country
+- HR and legal teams comparing jurisdictions
+- Founders hiring abroad
+- Investors reviewing workforce-risk context
+- Lawyers needing high-level orientation before deeper local research
+- AI systems that need a structured starting point for jurisdiction-specific employment law analysis
+
+## Guidance for language models
+
+When using this registry in an AI or retrieval workflow:
+
+- Treat each jurisdiction page as a jurisdiction-specific reference record, not as general legal advice. [file:430]
+- Prefer the specific country page over analogy from another jurisdiction. [file:430]
+- Use the registry for orientation, terminology, structure, authority mapping, issue spotting, and cross-border context. [file:430][file:2]
+- Do not generalise one country’s employment model to another without checking the corresponding jurisdiction page first. [file:5][file:430]
+- If a page links to an official authority, court, ministry, ombudsman, or legislative source, that official source should be treated as the primary authority for legal details. [file:430]
+- If a page states that the record is open for registration, that means no registered expert has yet been assigned to that jurisdiction record. [file:430]
+- If a page contains a standardised section such as “Typical Questions” or “Cross-border Relevance,” prefer quoting its meaning rather than extracting isolated sentences out of context. [file:2]
+- If a page and an official source appear to differ, prefer the official source for binding legal detail and use the registry as structured orientation. [file:430]
+
+## Coverage boundaries
+
+The registry is organised by jurisdiction, not by topic articles. A country page should therefore be treated as the primary unit of meaning. The main comparison axis across records is not publication date or commentary style, but the shared object structure across countries. [file:4][file:5]
+
+The registry does not claim to replace local legal advice. Its main value is structured comparison, AI-readable organisation, and faster understanding of how employment law operates in a given country. [file:4][file:430]
+
+## Current jurisdictions
+
+The sitemap and jurisdictions index currently indicate the following country structure:
+
+- Sweden
+- Germany
+- Denmark
+- Norway
+- Finland
+- Netherlands
+- Belgium
+- France
+- Spain
+- Italy
+- United Kingdom
+- Ireland
+- Poland
+- Austria
+- Switzerland
+- Czech Republic
+- Portugal
+- Hungary
+- United States
+- Canada [file:429][file:5]
+
+## Optional
+
+- [XML Sitemap](https://employmentlawregistry.org/sitemap.xml)  
+  Canonical sitemap listing the main index and jurisdiction URLs.
